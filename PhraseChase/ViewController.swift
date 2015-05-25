@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var wordDisplayLabel: UILabel!
     
-    var arrayCount = 0
+    var arrayCount = gameWords.count
     var randomNumber = 0
     var timer = NSTimer()
     var timeLimit = 35
@@ -60,15 +60,14 @@ class ViewController: UIViewController {
         if gameIsRunning == true {
             if event.subtype == UIEventSubtype.MotionShake {
                 randomNumber = Int(arc4random_uniform(UInt32(arrayCount)))
-                wordDisplayLabel.text = animals[randomNumber]
+                wordDisplayLabel.text = gameWords[randomNumber]
             }
         }
     }
     
     @IBAction func startButtonPressed(sender: AnyObject) {
-        arrayCount = animals.count
         randomNumber = Int(arc4random_uniform(UInt32(arrayCount)))
-        wordDisplayLabel.text = animals[randomNumber]
+        wordDisplayLabel.text = gameWords[randomNumber]
         
         timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateTime"), userInfo: nil, repeats: true)
         
