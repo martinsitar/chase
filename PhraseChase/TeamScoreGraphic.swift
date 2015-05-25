@@ -10,12 +10,29 @@ import UIKit
 @IBDesignable
 
 
-class TeamScore: UIView {
+class TeamScoreA: UIView {
     
+
     override func drawRect(rect: CGRect) {
         var path = UIBezierPath(roundedRect: CGRectMake(0, 0, 150, 100), byRoundingCorners:.BottomRight | .TopRight, cornerRadii: CGSizeMake(50, 50))
-        UIColor(red: 0, green: 173, blue: 253, alpha: 1).setFill()
+        UIColor(red: 0, green: 173/255, blue: 253/255, alpha: 1).setFill()
         path.fill()
+        
+            
+    }
+    
+    
+}
+
+class TeamScoreB: UIView {
+    
+    
+    override func drawRect(rect: CGRect) {
+        var path = UIBezierPath(roundedRect: CGRectMake(0, 0, 150, 100), byRoundingCorners:.BottomLeft | .TopLeft, cornerRadii: CGSizeMake(50, 50))
+        UIColor(red: 241/255, green: 0, blue: 65/255, alpha: 1).setFill()
+        path.fill()
+        
+        
     }
     
     
