@@ -15,10 +15,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var wordDisplayLabel: UILabel!
     
     var arrayCount = gameWords.count
-    var randomNumber = 0
+    var randomNumber:Int = 0
     var timer = NSTimer()
     var timeLimit = 35
     var gameIsRunning = false
+    var randomKey = ""
+    var randomVal: AnyObject!
     
     // timer to keep track of the rest period in between sets
     func updateTime() {
@@ -61,12 +63,18 @@ class ViewController: UIViewController {
             if event.subtype == UIEventSubtype.MotionShake {
                 randomNumber = Int(arc4random_uniform(UInt32(arrayCount)))
                 // wordDisplayLabel.text = randomValue
+                
+                randomKey = gameWords.keys.array[randomNumber]
+                randomVal = gameWords["\(randomKey)"]![randomNumber]
+                wordDisplayLabel.text = "\(randomVal)"
+                
+                println(randomKey)
+                println(randomVal)
             }
         }
     }
     
     @IBAction func startButtonPressed(sender: AnyObject) {
-        randomNumber = Int(arc4random_uniform(UInt32(arrayCount)))
          // wordDisplayLabel.text = randomValue
         
         timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateTime"), userInfo: nil, repeats: true)
@@ -74,12 +82,14 @@ class ViewController: UIViewController {
         startButton.hidden = true
         gameIsRunning = true
 
-        let randomKey = gameWords.keys.array[randomNumber]
-        let randomVal = gameWords["\(randomKey)"]![randomNumber]
+        randomNumber = Int(arc4random_uniform(UInt32(arrayCount)))
         
+        randomKey = gameWords.keys.array[randomNumber]
+        randomVal = gameWords["\(randomKey)"]![randomNumber]
+        
+        wordDisplayLabel.text = "\(randomVal)"
         println(randomKey)
         println(randomVal)
-        
     
     }
     

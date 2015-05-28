@@ -10,7 +10,8 @@ import Foundation
 
 var categories = ["Animals","Famous People","Landmarks","Cities","Countries", "Around the House"]
 
-var gameWords = ["Animals": [
+
+var gameWords:[String:AnyObject] = ["Animals": [
 "cat",
 "dog",
 "alligator",
