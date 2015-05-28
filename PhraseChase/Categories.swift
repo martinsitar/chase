@@ -9,7 +9,7 @@
 import Foundation
 
 var categories = ["Animals","Famous People","Landmarks","Cities","Countries", "Around the House"]
-
+/*
 let gameWords = ["Animals": [
 "cat",
 "dog",
@@ -1045,3 +1045,4 @@ let gameWords = ["Animals": [
 "soap",
 "washing powder",
 ]]
+*/
