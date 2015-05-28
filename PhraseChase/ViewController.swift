@@ -60,19 +60,25 @@ class ViewController: UIViewController {
         if gameIsRunning == true {
             if event.subtype == UIEventSubtype.MotionShake {
                 randomNumber = Int(arc4random_uniform(UInt32(arrayCount)))
-                wordDisplayLabel.text = gameWords[randomNumber]
+                // wordDisplayLabel.text = randomValue
             }
         }
     }
     
     @IBAction func startButtonPressed(sender: AnyObject) {
         randomNumber = Int(arc4random_uniform(UInt32(arrayCount)))
-        wordDisplayLabel.text = gameWords[randomNumber]
+         // wordDisplayLabel.text = randomValue
         
         timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateTime"), userInfo: nil, repeats: true)
         
         startButton.hidden = true
         gameIsRunning = true
+
+        let randomKey = gameWords.keys.array[randomNumber]
+        let randomVal = gameWords["\(randomKey)"]![randomNumber]
+        
+        println(randomKey)
+        println(randomVal)
         
     
     }
