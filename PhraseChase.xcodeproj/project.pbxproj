@@ -15,6 +15,7 @@
 		C81F336F1B0EA469003961BC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C81F336D1B0EA469003961BC /* LaunchScreen.xib */; };
 		C81F337B1B0EA469003961BC /* PhraseChaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81F337A1B0EA469003961BC /* PhraseChaseTests.swift */; };
 		C81F33851B0EA4A3003961BC /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81F33841B0EA4A3003961BC /* Categories.swift */; };
+		C82239211B1801E8006BAEB1 /* PointRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82239201B1801E8006BAEB1 /* PointRecord.swift */; };
 		C8F66D381B10D8FB00439C0D /* FormattingFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F66D371B10D8FB00439C0D /* FormattingFile.swift */; };
 		C8F66D3C1B1134BD00439C0D /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F66D3B1B1134BD00439C0D /* TableViewController.swift */; };
 		C8F66D3E1B11402E00439C0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F66D3D1B11402E00439C0D /* ViewController.swift */; };
@@ -44,6 +45,7 @@
 		C81F33791B0EA469003961BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C81F337A1B0EA469003961BC /* PhraseChaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhraseChaseTests.swift; sourceTree = "<group>"; };
 		C81F33841B0EA4A3003961BC /* Categories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
+		C82239201B1801E8006BAEB1 /* PointRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointRecord.swift; sourceTree = "<group>"; };
 		C8F66D371B10D8FB00439C0D /* FormattingFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormattingFile.swift; sourceTree = "<group>"; };
 		C8F66D3B1B1134BD00439C0D /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewController.swift; path = ../TableViewController.swift; sourceTree = "<group>"; };
 		C8F66D3D1B11402E00439C0D /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				C81F33681B0EA469003961BC /* Main.storyboard */,
+				C82239201B1801E8006BAEB1 /* PointRecord.swift */,
 				C81F33641B0EA469003961BC /* AppDelegate.swift */,
 				C8F66D3B1B1134BD00439C0D /* TableViewController.swift */,
 				C8F66D3D1B11402E00439C0D /* ViewController.swift */,
@@ -244,6 +247,7 @@
 				C8F66D401B1140F500439C0D /* TeamScoreGraphic.swift in Sources */,
 				C8F66D3E1B11402E00439C0D /* ViewController.swift in Sources */,
 				C81F33651B0EA469003961BC /* AppDelegate.swift in Sources */,
+				C82239211B1801E8006BAEB1 /* PointRecord.swift in Sources */,
 				C8F66D381B10D8FB00439C0D /* FormattingFile.swift in Sources */,
 				C8F66D3C1B1134BD00439C0D /* TableViewController.swift in Sources */,
 				C81F33851B0EA4A3003961BC /* Categories.swift in Sources */,
