@@ -13,11 +13,13 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var wordDisplayLabel: UILabel!
+    @IBOutlet weak var teamAScore: UILabel!
+    @IBOutlet weak var teamBScore: UILabel!
     
     var keyCount = gameWords.count
     var randomNumber = 0
     var timer = NSTimer()
-    var timeLimit = 35
+    var timeLimit = 20
     var gameIsRunning = false
     var randomKey = ""
     var randomVal: AnyObject!
@@ -32,6 +34,10 @@ class ViewController: UIViewController {
             startButton.setTitle("Continue", forState: UIControlState.Normal)
             gameIsRunning = false
             performSegueWithIdentifier("scoreEntry", sender: self)
+            
+            if pointsA == 7 || pointsB == 7 {
+                println("Game Over!")
+            }
             
         } else if timeLimit < 30 && timeLimit > 10 {
             timeLimit--
@@ -64,6 +70,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        teamAScore.text = "\(pointsA)"
+         teamBScore.text = "\(pointsB)"
     }
 
     override func didReceiveMemoryWarning() {
