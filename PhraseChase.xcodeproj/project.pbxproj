@@ -16,6 +16,8 @@
 		C81F337B1B0EA469003961BC /* PhraseChaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81F337A1B0EA469003961BC /* PhraseChaseTests.swift */; };
 		C81F33851B0EA4A3003961BC /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81F33841B0EA4A3003961BC /* Categories.swift */; };
 		C82239211B1801E8006BAEB1 /* PointRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82239201B1801E8006BAEB1 /* PointRecord.swift */; };
+		C87012CF1B1E9D17004AC0A7 /* momentum.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C87012CE1B1E9D17004AC0A7 /* momentum.mp3 */; };
+		C87012D11B1EA0D8004AC0A7 /* Victory.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C87012D01B1EA0D8004AC0A7 /* Victory.mp3 */; };
 		C8F66D381B10D8FB00439C0D /* FormattingFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F66D371B10D8FB00439C0D /* FormattingFile.swift */; };
 		C8F66D3C1B1134BD00439C0D /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F66D3B1B1134BD00439C0D /* TableViewController.swift */; };
 		C8F66D3E1B11402E00439C0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F66D3D1B11402E00439C0D /* ViewController.swift */; };
@@ -46,6 +48,8 @@
 		C81F337A1B0EA469003961BC /* PhraseChaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhraseChaseTests.swift; sourceTree = "<group>"; };
 		C81F33841B0EA4A3003961BC /* Categories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
 		C82239201B1801E8006BAEB1 /* PointRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointRecord.swift; sourceTree = "<group>"; };
+		C87012CE1B1E9D17004AC0A7 /* momentum.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = momentum.mp3; path = sounds/momentum.mp3; sourceTree = "<group>"; };
+		C87012D01B1EA0D8004AC0A7 /* Victory.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Victory.mp3; sourceTree = "<group>"; };
 		C8F66D371B10D8FB00439C0D /* FormattingFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormattingFile.swift; sourceTree = "<group>"; };
 		C8F66D3B1B1134BD00439C0D /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewController.swift; path = ../TableViewController.swift; sourceTree = "<group>"; };
 		C8F66D3D1B11402E00439C0D /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +106,8 @@
 			children = (
 				C81F33681B0EA469003961BC /* Main.storyboard */,
 				C82239201B1801E8006BAEB1 /* PointRecord.swift */,
+				C87012CE1B1E9D17004AC0A7 /* momentum.mp3 */,
+				C87012D01B1EA0D8004AC0A7 /* Victory.mp3 */,
 				C81F33641B0EA469003961BC /* AppDelegate.swift */,
 				C8F66D3B1B1134BD00439C0D /* TableViewController.swift */,
 				C8F66D3D1B11402E00439C0D /* ViewController.swift */,
@@ -222,10 +228,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C87012D11B1EA0D8004AC0A7 /* Victory.mp3 in Resources */,
 				C81F336A1B0EA469003961BC /* Main.storyboard in Resources */,
 				C80F57951B0EB382007DEE00 /* VarelaRound-Regular.ttf in Resources */,
 				C80F57971B0EC9CA007DEE00 /* tick-tock.mp3 in Resources */,
 				C81F336F1B0EA469003961BC /* LaunchScreen.xib in Resources */,
+				C87012CF1B1E9D17004AC0A7 /* momentum.mp3 in Resources */,
 				C81F336C1B0EA469003961BC /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

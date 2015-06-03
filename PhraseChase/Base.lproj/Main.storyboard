@@ -34,12 +34,6 @@
                                     <segue destination="inG-7B-htd" kind="presentation" id="081-ha-cjK"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="GYl-1m-g4z">
-                                <rect key="frame" x="155" y="267" width="291" height="65"/>
-                                <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="40"/>
-                                <color key="textColor" red="0.99990516901016235" green="1" blue="0.99987047910690308" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nq8-z1-VGa">
                                 <rect key="frame" x="252" y="381" width="96" height="37"/>
                                 <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="24"/>
@@ -51,37 +45,60 @@
                                     <action selector="startButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="XQM-4s-i4j"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Team A" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kjJ-Wh-h6d">
-                                <rect key="frame" x="35" y="269" width="57" height="21"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="teamAimage" translatesAutoresizingMaskIntoConstraints="NO" id="zIN-8m-PR4">
+                                <rect key="frame" x="-68" y="263" width="215" height="74"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="teamBimage" translatesAutoresizingMaskIntoConstraints="NO" id="MyW-T0-Gj3">
+                                <rect key="frame" x="454" y="263" width="215" height="74"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team A" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kjJ-Wh-h6d">
+                                <rect key="frame" x="35" y="274" width="57" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Team B" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vKQ-0j-qn5">
-                                <rect key="frame" x="510" y="268" width="58" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Team B" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vKQ-0j-qn5">
+                                <rect key="frame" x="513" y="274" width="58" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dyQ-UU-klL">
-                                <rect key="frame" x="34" y="294" width="58" height="21"/>
+                                <rect key="frame" x="35" y="299" width="58" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m8i-Le-LDq">
-                                <rect key="frame" x="509" y="293" width="59" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m8i-Le-LDq">
+                                <rect key="frame" x="513" y="299" width="59" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="GYl-1m-g4z">
+                                <rect key="frame" x="208" y="274" width="185" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="185" id="KE1-wP-Y76"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="40"/>
+                                <color key="textColor" red="0.99990516901016235" green="1" blue="0.99987047910690308" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.17717251181602478" green="0.17751896381378174" blue="0.22971495985984802" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="MyW-T0-Gj3" firstAttribute="top" secondItem="vKQ-0j-qn5" secondAttribute="bottom" constant="-32" id="A3G-Yl-PDK"/>
+                            <constraint firstItem="MyW-T0-Gj3" firstAttribute="leading" secondItem="m8i-Le-LDq" secondAttribute="trailing" constant="-118" id="Ap4-Oc-uSr"/>
+                            <constraint firstAttribute="centerX" secondItem="MyW-T0-Gj3" secondAttribute="centerX" constant="-261.5" id="L2b-FY-0m8"/>
+                            <constraint firstAttribute="centerY" secondItem="zIN-8m-PR4" secondAttribute="centerY" id="LJc-aN-PGF"/>
+                            <constraint firstItem="zIN-8m-PR4" firstAttribute="top" secondItem="kjJ-Wh-h6d" secondAttribute="bottom" constant="-32" id="LuT-xr-4q8"/>
                             <constraint firstAttribute="centerX" secondItem="GYl-1m-g4z" secondAttribute="centerX" constant="-0.5" id="MeF-Vx-wvc"/>
+                            <constraint firstAttribute="centerY" secondItem="MyW-T0-Gj3" secondAttribute="centerY" id="UjC-is-I3d"/>
                             <constraint firstAttribute="centerY" secondItem="GYl-1m-g4z" secondAttribute="centerY" constant="0.5" id="Vfd-p7-lO6"/>
                             <constraint firstAttribute="centerX" secondItem="Nq8-z1-VGa" secondAttribute="centerX" id="hwO-ZB-PDt"/>
+                            <constraint firstItem="kjJ-Wh-h6d" firstAttribute="leading" secondItem="zIN-8m-PR4" secondAttribute="trailing" constant="-112" id="qeE-Wv-vb6"/>
                             <constraint firstItem="Nq8-z1-VGa" firstAttribute="top" secondItem="GYl-1m-g4z" secondAttribute="bottom" constant="49" id="x29-dF-w6W"/>
+                            <constraint firstAttribute="centerX" secondItem="zIN-8m-PR4" secondAttribute="centerX" constant="260.5" id="yg7-ae-ku5"/>
                         </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -167,6 +184,12 @@
                                     <segue destination="vXZ-lx-hvc" kind="show" id="1hP-Jb-Dz4"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time's up! Award a point to the opposing team. " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wT6-XT-lfy">
+                                <rect key="frame" x="116" y="147" width="369" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -180,6 +203,10 @@
             <point key="canvasLocation" x="593" y="1105"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="teamAimage" width="215" height="74"/>
+        <image name="teamBimage" width="229" height="74"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="oEL-td-I9J"/>
     </inferredMetricsTieBreakers>

@@ -8,8 +8,8 @@
 
 import UIKit
 
-var pointsA = 0
-var pointsB = 0
+var pointsA = 1
+var pointsB = 1
 
 class PointRecord: UIViewController {
 
@@ -18,21 +18,15 @@ class PointRecord: UIViewController {
 
     
     @IBAction func teamAButtonPressed(sender: AnyObject) {
-        pointsA = pointsA++
+        pointsA = pointsA+1
         println(pointsA)
     }
     
     
     @IBAction func teamBButtonPressed(sender: AnyObject) {
-        pointsB = pointsB++
+        pointsB = pointsB+1
         println(pointsB)
         
-    }
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        var DestinationViewController : ViewController = segue.destinationViewController as! ViewController
-        DestinationViewController.pointsA = teamAScore.text
-        DestinationViewController.PointsB = teamAScore.text
     }
     
     

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
 
@@ -19,10 +20,37 @@ class ViewController: UIViewController {
     var keyCount = gameWords.count
     var randomNumber = 0
     var timer = NSTimer()
-    var timeLimit = 20
+    var timeLimit = 40
     var gameIsRunning = false
     var randomKey = ""
     var randomVal: AnyObject!
+    var player:AVAudioPlayer = AVAudioPlayer()
+    var timeRunning = false
+    
+    func playTimer() {
+        var audioPath = NSBundle.mainBundle().pathForResource("momentum", ofType: "mp3")!
+        var error : NSError? = nil
+        
+        player = AVAudioPlayer(contentsOfURL: NSURL(string: audioPath), error: &error)
+        
+        player.volume = 0.6
+        player.numberOfLoops = -1
+        
+        if error == nil {
+            player.play()
+        }
+    }
+    
+    func playWinner() {
+        var audioPath = NSBundle.mainBundle().pathForResource("Victory", ofType: "mp3")!
+        var error : NSError? = nil
+        
+        player = AVAudioPlayer(contentsOfURL: NSURL(string: audioPath), error: &error)
+        
+        if error == nil {
+            player.play()
+        }
+    }
     
     // timer to keep track of the rest period in between sets
     func updateTime() {
@@ -34,11 +62,6 @@ class ViewController: UIViewController {
             startButton.setTitle("Continue", forState: UIControlState.Normal)
             gameIsRunning = false
             performSegueWithIdentifier("scoreEntry", sender: self)
-            
-            if pointsA == 7 || pointsB == 7 {
-                println("Game Over!")
-            }
-            
         } else if timeLimit < 30 && timeLimit > 10 {
             timeLimit--
             //println("Hurry up!")
@@ -49,6 +72,8 @@ class ViewController: UIViewController {
             timeLimit--
             println(timeLimit)
         }
+        
+        timeRunning = true
     }
 
     func randomWord() {
@@ -62,6 +87,7 @@ class ViewController: UIViewController {
         println(newDictNumber)
         println(randomWord)
         
+        wordDisplayLabel.adjustsFontSizeToFitWidth = true
         wordDisplayLabel.text = "\(randomValue)".uppercaseString
         
     }
@@ -72,9 +98,14 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    override func viewDidAppear(animated: Bool) {
+    
+    override func viewWillAppear(animated: Bool) {
         teamAScore.text = "\(pointsA)"
-         teamBScore.text = "\(pointsB)"
+        teamBScore.text = "\(pointsB)"
+        if pointsA == 2 || pointsB == 2 {
+            println("Game Over!")
+            playWinner()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -101,6 +132,10 @@ class ViewController: UIViewController {
         startButton.hidden = true
         gameIsRunning = true
         randomWord()
+        
+        if gameIsRunning == true {
+            playTimer()
+        }
     
     }
     
