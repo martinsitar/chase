@@ -150,7 +150,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OQT-xJ-lHy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1121" y="314"/>
+            <point key="canvasLocation" x="707" y="314"/>
+        </scene>
+        <!--Winner-->
+        <scene sceneID="zpr-QB-8jC">
+            <objects>
+                <viewController id="WUF-55-eDL" customClass="Winner" customModule="PhraseChase" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="91G-UX-52t"/>
+                        <viewControllerLayoutGuide type="bottom" id="ucR-wg-FO9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8jB-3R-tIV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="re3-F6-E41" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="707" y="993"/>
         </scene>
         <!--Point Record-->
         <scene sceneID="FWm-k3-mJX">
@@ -200,7 +218,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sbB-W3-7X9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="593" y="1105"/>
+            <point key="canvasLocation" x="-7" y="993"/>
         </scene>
     </scenes>
     <resources>

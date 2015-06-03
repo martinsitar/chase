@@ -25,9 +25,12 @@ class ViewController: UIViewController {
     var randomKey = ""
     var randomVal: AnyObject!
     var player:AVAudioPlayer = AVAudioPlayer()
+    var player2:AVAudioPlayer = AVAudioPlayer()
     var timeRunning = false
     
+    // This function plays the countdown sound
     func playTimer() {
+        // Set up the audio player to play the timer audio
         var audioPath = NSBundle.mainBundle().pathForResource("momentum", ofType: "mp3")!
         var error : NSError? = nil
         
@@ -36,27 +39,31 @@ class ViewController: UIViewController {
         player.volume = 0.6
         player.numberOfLoops = -1
         
-        if error == nil {
+        
+        if gameIsRunning == true {
             player.play()
+        } else if gameIsRunning == false {
+            player.stop()
         }
     }
     
+    // Plays the winning sound
     func playWinner() {
         var audioPath = NSBundle.mainBundle().pathForResource("Victory", ofType: "mp3")!
         var error : NSError? = nil
         
-        player = AVAudioPlayer(contentsOfURL: NSURL(string: audioPath), error: &error)
+        player2 = AVAudioPlayer(contentsOfURL: NSURL(string: audioPath), error: &error)
         
         if error == nil {
-            player.play()
+            player2.play()
         }
     }
     
     // timer to keep track of the rest period in between sets
     func updateTime() {
+        // First statement resets everything before the session ran. Stop & reset the timer, show the start button, change it to continue. Set the game running variable to false, send user to record the score on the other vc.
         if timeLimit == 0 {
             println("Time's up!")
-            timeLimit = 35
             timer.invalidate()
             startButton.hidden = false
             startButton.setTitle("Continue", forState: UIControlState.Normal)
@@ -77,7 +84,7 @@ class ViewController: UIViewController {
     }
 
     func randomWord() {
-        // A random key is pulled from the dictionary as a string value
+        // A random key is pulled from the dictionary as a string value.
         randomNumber = Int(arc4random_uniform(UInt32(keyCount)))
         randomKey = gameWords.keys.array[randomNumber]
         var newDictNumber = gameWords[randomKey]!.count
@@ -100,6 +107,7 @@ class ViewController: UIViewController {
     
     
     override func viewWillAppear(animated: Bool) {
+        // Set the labels on the main screen to current score.
         teamAScore.text = "\(pointsA)"
         teamBScore.text = "\(pointsB)"
         if pointsA == 2 || pointsB == 2 {
@@ -131,11 +139,9 @@ class ViewController: UIViewController {
         
         startButton.hidden = true
         gameIsRunning = true
-        randomWord()
         
-        if gameIsRunning == true {
-            playTimer()
-        }
+        // Generate a random word
+        randomWord()
     
     }
     
