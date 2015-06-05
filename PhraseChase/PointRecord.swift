@@ -9,8 +9,9 @@
 import UIKit
 import AVFoundation
 
-var pointsA = 1
-var pointsB = 1
+var pointsA = 0
+var pointsB = 0
+var winningScore = 8
 
 class PointRecord: UIViewController {
 
@@ -48,10 +49,13 @@ class PointRecord: UIViewController {
         println(pointsA)
         playPoint()
         
-        if pointsA == 3 || pointsB == 3 {
+        if pointsA == winningScore || pointsB == winningScore {
             println("Game Over!")
             performSegueWithIdentifier("showWinner", sender: self)
+        } else {
+            performSegueWithIdentifier("teamAPoint", sender: self)
         }
+            
     }
     
     
@@ -60,9 +64,11 @@ class PointRecord: UIViewController {
         println(pointsB)
         playPoint()
         
-        if pointsA == 3 || pointsB == 3 {
+        if pointsA == winningScore || pointsB == winningScore {
             println("Game Over!")
             performSegueWithIdentifier("showWinner", sender: self)
+        } else {
+            performSegueWithIdentifier("teamBPoint", sender: self)
         }
         
     }

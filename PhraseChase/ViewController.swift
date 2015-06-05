@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     var keyCount = gameWords.count
     var randomNumber = 0
     var timer = NSTimer()
-    var timeLimit = 40
+    var timeLimit = arc4random_uniform(10)+60
     var gameIsRunning = false
     var randomKey = ""
     var randomVal: AnyObject!
@@ -64,18 +64,6 @@ class ViewController: UIViewController {
         } else if gameIsRunning == false {
             player.stop()
         } */
-    }
-    
-    // Plays the winning sound
-    func playWinner() {
-        var audioPath = NSBundle.mainBundle().pathForResource("Victory", ofType: "mp3")!
-        var error : NSError? = nil
-        
-        player2 = AVAudioPlayer(contentsOfURL: NSURL(string: audioPath), error: &error)
-        
-        if error == nil {
-            player2.play()
-        }
     }
     
     // Plays the buzzer
@@ -136,6 +124,7 @@ class ViewController: UIViewController {
         // Set the labels on the main screen to current score.
         teamAScore.text = "\(pointsA)"
         teamBScore.text = "\(pointsB)"
+
         
         startButton.hidden = false
         startButton.setTitle("Continue", forState: UIControlState.Normal)

@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "C81F335E1B0EA469003961BC"
-               BuildableName = "Word Rush Fever.app"
-               BlueprintName = "Word Rush Fever"
+               BuildableName = "PhraseChase.app"
+               BlueprintName = "PhraseChase"
                ReferencedContainer = "container:Word Rush Fever.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -29,8 +29,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "C81F33731B0EA469003961BC"
-               BuildableName = "Word Rush FeverTests.xctest"
-               BlueprintName = "Word Rush FeverTests"
+               BuildableName = "PhraseChaseTests.xctest"
+               BlueprintName = "PhraseChaseTests"
                ReferencedContainer = "container:Word Rush Fever.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -47,8 +47,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "C81F33731B0EA469003961BC"
-               BuildableName = "Word Rush FeverTests.xctest"
-               BlueprintName = "Word Rush FeverTests"
+               BuildableName = "PhraseChaseTests.xctest"
+               BlueprintName = "PhraseChaseTests"
                ReferencedContainer = "container:Word Rush Fever.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -57,8 +57,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C81F335E1B0EA469003961BC"
-            BuildableName = "Word Rush Fever.app"
-            BlueprintName = "Word Rush Fever"
+            BuildableName = "PhraseChase.app"
+            BlueprintName = "PhraseChase"
             ReferencedContainer = "container:Word Rush Fever.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -77,8 +77,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C81F335E1B0EA469003961BC"
-            BuildableName = "Word Rush Fever.app"
-            BlueprintName = "Word Rush Fever"
+            BuildableName = "PhraseChase.app"
+            BlueprintName = "PhraseChase"
             ReferencedContainer = "container:Word Rush Fever.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -96,8 +96,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C81F335E1B0EA469003961BC"
-            BuildableName = "Word Rush Fever.app"
-            BlueprintName = "Word Rush Fever"
+            BuildableName = "PhraseChase.app"
+            BlueprintName = "PhraseChase"
             ReferencedContainer = "container:Word Rush Fever.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
