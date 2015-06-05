@@ -8,6 +8,7 @@
 
 import UIKit
 import AVFoundation
+import AudioToolbox
 
 class ViewController: UIViewController {
 
@@ -26,7 +27,9 @@ class ViewController: UIViewController {
     var randomVal: AnyObject!
     var player:AVAudioPlayer = AVAudioPlayer()
     var player2:AVAudioPlayer = AVAudioPlayer()
-    var timeRunning = false
+    var player3:AVAudioPlayer = AVAudioPlayer()
+    var player4:AVAudioPlayer = AVAudioPlayer()
+    
     
     // This function plays the countdown sound
     func playTimer() {
@@ -38,7 +41,6 @@ class ViewController: UIViewController {
         
         player.volume = 0.6
         player.numberOfLoops = -1
-        
         
         if gameIsRunning == true {
             player.play()
@@ -65,10 +67,10 @@ class ViewController: UIViewController {
         if timeLimit == 0 {
             println("Time's up!")
             timer.invalidate()
-            startButton.hidden = false
-            startButton.setTitle("Continue", forState: UIControlState.Normal)
             gameIsRunning = false
             performSegueWithIdentifier("scoreEntry", sender: self)
+            player.stop()
+            
         } else if timeLimit < 30 && timeLimit > 10 {
             timeLimit--
             //println("Hurry up!")
@@ -78,9 +80,9 @@ class ViewController: UIViewController {
         } else {
             timeLimit--
             println(timeLimit)
+            playTimer()
         }
-        
-        timeRunning = true
+
     }
 
     func randomWord() {
@@ -101,7 +103,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
     
@@ -110,10 +111,16 @@ class ViewController: UIViewController {
         // Set the labels on the main screen to current score.
         teamAScore.text = "\(pointsA)"
         teamBScore.text = "\(pointsB)"
-        if pointsA == 2 || pointsB == 2 {
+        
+        if pointsA == 8 || pointsB == 8 {
             println("Game Over!")
             playWinner()
+            performSegueWithIdentifier("showWinner", sender: self)
         }
+        
+        startButton.hidden = false
+        startButton.setTitle("Continue", forState: UIControlState.Normal)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -132,17 +139,16 @@ class ViewController: UIViewController {
     }
     
     @IBAction func startButtonPressed(sender: AnyObject) {
-         // wordDisplayLabel.text = randomValue
-        randomNumber = Int(arc4random_uniform(UInt32(keyCount)))
-        
-        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateTime"), userInfo: nil, repeats: true)
         
         startButton.hidden = true
         gameIsRunning = true
         
+        randomNumber = Int(arc4random_uniform(UInt32(keyCount)))
+        
+        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateTime"), userInfo: nil, repeats: true)
+        
         // Generate a random word
         randomWord()
-    
     }
     
 }

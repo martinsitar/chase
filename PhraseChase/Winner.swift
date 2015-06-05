@@ -6,6 +6,7 @@
 //  Copyright (c) 2015 Martin Sitar. All rights reserved.
 //
 
+import UIKit
 import Foundation
 
 class Winner: UIViewController {
