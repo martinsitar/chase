@@ -18,6 +18,9 @@
 		C84EA60E1B2127030081E8C7 /* LilitaOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C87012D61B21165A004AC0A7 /* LilitaOne-Regular.ttf */; };
 		C84EA6101B2153D40081E8C7 /* momentum.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C84EA60F1B2153D40081E8C7 /* momentum.mp3 */; };
 		C84EA6121B21540E0081E8C7 /* point-awarded.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C84EA6111B21540E0081E8C7 /* point-awarded.mp3 */; };
+		C84EA6141B21589A0081E8C7 /* buzzer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C84EA6131B21589A0081E8C7 /* buzzer.mp3 */; };
+		C84EA6171B215DD60081E8C7 /* momentum-2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C84EA6151B215DD60081E8C7 /* momentum-2.mp3 */; };
+		C84EA6181B215DD60081E8C7 /* momentum-3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C84EA6161B215DD60081E8C7 /* momentum-3.mp3 */; };
 		C87012D11B1EA0D8004AC0A7 /* Victory.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C87012D01B1EA0D8004AC0A7 /* Victory.mp3 */; };
 		C87012D31B1FC322004AC0A7 /* Winner.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87012D21B1FC322004AC0A7 /* Winner.swift */; };
 		C87012D51B1FEB5C004AC0A7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C87012D41B1FEB5C004AC0A7 /* AudioToolbox.framework */; };
@@ -38,19 +41,22 @@
 
 /* Begin PBXFileReference section */
 		C80F57941B0EB382007DEE00 /* VarelaRound-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VarelaRound-Regular.ttf"; sourceTree = "<group>"; };
-		C81F335F1B0EA469003961BC /* PhraseChase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhraseChase.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C81F335F1B0EA469003961BC /* Word Rush Fever.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Word Rush Fever.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C81F33631B0EA469003961BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C81F33641B0EA469003961BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C81F33691B0EA469003961BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C81F336B1B0EA469003961BC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C81F336E1B0EA469003961BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		C81F33741B0EA469003961BC /* PhraseChaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhraseChaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C81F33741B0EA469003961BC /* Word Rush FeverTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Word Rush FeverTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C81F33791B0EA469003961BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C81F337A1B0EA469003961BC /* PhraseChaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhraseChaseTests.swift; sourceTree = "<group>"; };
 		C81F33841B0EA4A3003961BC /* Categories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
 		C82239201B1801E8006BAEB1 /* PointRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointRecord.swift; sourceTree = "<group>"; };
 		C84EA60F1B2153D40081E8C7 /* momentum.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = momentum.mp3; sourceTree = "<group>"; };
 		C84EA6111B21540E0081E8C7 /* point-awarded.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "point-awarded.mp3"; sourceTree = "<group>"; };
+		C84EA6131B21589A0081E8C7 /* buzzer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = buzzer.mp3; sourceTree = "<group>"; };
+		C84EA6151B215DD60081E8C7 /* momentum-2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "momentum-2.mp3"; sourceTree = "<group>"; };
+		C84EA6161B215DD60081E8C7 /* momentum-3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "momentum-3.mp3"; sourceTree = "<group>"; };
 		C87012D01B1EA0D8004AC0A7 /* Victory.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Victory.mp3; sourceTree = "<group>"; };
 		C87012D21B1FC322004AC0A7 /* Winner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Winner.swift; sourceTree = "<group>"; };
 		C87012D41B1FEB5C004AC0A7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -101,8 +107,8 @@
 		C81F33601B0EA469003961BC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C81F335F1B0EA469003961BC /* PhraseChase.app */,
-				C81F33741B0EA469003961BC /* PhraseChaseTests.xctest */,
+				C81F335F1B0EA469003961BC /* Word Rush Fever.app */,
+				C81F33741B0EA469003961BC /* Word Rush FeverTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -115,8 +121,11 @@
 				C82239201B1801E8006BAEB1 /* PointRecord.swift */,
 				C84EA6111B21540E0081E8C7 /* point-awarded.mp3 */,
 				C84EA60F1B2153D40081E8C7 /* momentum.mp3 */,
+				C84EA6151B215DD60081E8C7 /* momentum-2.mp3 */,
+				C84EA6161B215DD60081E8C7 /* momentum-3.mp3 */,
 				C87012D21B1FC322004AC0A7 /* Winner.swift */,
 				C87012D01B1EA0D8004AC0A7 /* Victory.mp3 */,
+				C84EA6131B21589A0081E8C7 /* buzzer.mp3 */,
 				C81F33641B0EA469003961BC /* AppDelegate.swift */,
 				C8F66D3B1B1134BD00439C0D /* TableViewController.swift */,
 				C81F336B1B0EA469003961BC /* Images.xcassets */,
@@ -157,9 +166,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C81F335E1B0EA469003961BC /* PhraseChase */ = {
+		C81F335E1B0EA469003961BC /* Word Rush Fever */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C81F337E1B0EA469003961BC /* Build configuration list for PBXNativeTarget "PhraseChase" */;
+			buildConfigurationList = C81F337E1B0EA469003961BC /* Build configuration list for PBXNativeTarget "Word Rush Fever" */;
 			buildPhases = (
 				C81F335B1B0EA469003961BC /* Sources */,
 				C81F335C1B0EA469003961BC /* Frameworks */,
@@ -169,14 +178,14 @@
 			);
 			dependencies = (
 			);
-			name = PhraseChase;
+			name = "Word Rush Fever";
 			productName = PhraseChase;
-			productReference = C81F335F1B0EA469003961BC /* PhraseChase.app */;
+			productReference = C81F335F1B0EA469003961BC /* Word Rush Fever.app */;
 			productType = "com.apple.product-type.application";
 		};
-		C81F33731B0EA469003961BC /* PhraseChaseTests */ = {
+		C81F33731B0EA469003961BC /* Word Rush FeverTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C81F33811B0EA469003961BC /* Build configuration list for PBXNativeTarget "PhraseChaseTests" */;
+			buildConfigurationList = C81F33811B0EA469003961BC /* Build configuration list for PBXNativeTarget "Word Rush FeverTests" */;
 			buildPhases = (
 				C81F33701B0EA469003961BC /* Sources */,
 				C81F33711B0EA469003961BC /* Frameworks */,
@@ -187,9 +196,9 @@
 			dependencies = (
 				C81F33761B0EA469003961BC /* PBXTargetDependency */,
 			);
-			name = PhraseChaseTests;
+			name = "Word Rush FeverTests";
 			productName = PhraseChaseTests;
-			productReference = C81F33741B0EA469003961BC /* PhraseChaseTests.xctest */;
+			productReference = C81F33741B0EA469003961BC /* Word Rush FeverTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -211,7 +220,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C81F335A1B0EA469003961BC /* Build configuration list for PBXProject "PhraseChase" */;
+			buildConfigurationList = C81F335A1B0EA469003961BC /* Build configuration list for PBXProject "Word Rush Fever" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -224,8 +233,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C81F335E1B0EA469003961BC /* PhraseChase */,
-				C81F33731B0EA469003961BC /* PhraseChaseTests */,
+				C81F335E1B0EA469003961BC /* Word Rush Fever */,
+				C81F33731B0EA469003961BC /* Word Rush FeverTests */,
 			);
 		};
 /* End PBXProject section */
@@ -237,10 +246,13 @@
 			files = (
 				C87012D11B1EA0D8004AC0A7 /* Victory.mp3 in Resources */,
 				C84EA6101B2153D40081E8C7 /* momentum.mp3 in Resources */,
+				C84EA6141B21589A0081E8C7 /* buzzer.mp3 in Resources */,
+				C84EA6181B215DD60081E8C7 /* momentum-3.mp3 in Resources */,
 				C81F336A1B0EA469003961BC /* Main.storyboard in Resources */,
 				C80F57951B0EB382007DEE00 /* VarelaRound-Regular.ttf in Resources */,
 				C84EA60E1B2127030081E8C7 /* LilitaOne-Regular.ttf in Resources */,
 				C81F336F1B0EA469003961BC /* LaunchScreen.xib in Resources */,
+				C84EA6171B215DD60081E8C7 /* momentum-2.mp3 in Resources */,
 				C84EA6121B21540E0081E8C7 /* point-awarded.mp3 in Resources */,
 				C81F336C1B0EA469003961BC /* Images.xcassets in Resources */,
 			);
@@ -283,7 +295,7 @@
 /* Begin PBXTargetDependency section */
 		C81F33761B0EA469003961BC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C81F335E1B0EA469003961BC /* PhraseChase */;
+			target = C81F335E1B0EA469003961BC /* Word Rush Fever */;
 			targetProxy = C81F33751B0EA469003961BC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -392,7 +404,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = PhraseChase/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Word Rush Fever";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -404,7 +416,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = PhraseChase/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Word Rush Fever";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -423,7 +435,7 @@
 				);
 				INFOPLIST_FILE = PhraseChaseTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Word Rush FeverTests";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PhraseChase.app/PhraseChase";
 			};
 			name = Debug;
@@ -438,7 +450,7 @@
 				);
 				INFOPLIST_FILE = PhraseChaseTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Word Rush FeverTests";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PhraseChase.app/PhraseChase";
 			};
 			name = Release;
@@ -446,7 +458,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C81F335A1B0EA469003961BC /* Build configuration list for PBXProject "PhraseChase" */ = {
+		C81F335A1B0EA469003961BC /* Build configuration list for PBXProject "Word Rush Fever" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C81F337C1B0EA469003961BC /* Debug */,
@@ -455,7 +467,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C81F337E1B0EA469003961BC /* Build configuration list for PBXNativeTarget "PhraseChase" */ = {
+		C81F337E1B0EA469003961BC /* Build configuration list for PBXNativeTarget "Word Rush Fever" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C81F337F1B0EA469003961BC /* Debug */,
@@ -464,7 +476,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C81F33811B0EA469003961BC /* Build configuration list for PBXNativeTarget "PhraseChaseTests" */ = {
+		C81F33811B0EA469003961BC /* Build configuration list for PBXNativeTarget "Word Rush FeverTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C81F33821B0EA469003961BC /* Debug */,

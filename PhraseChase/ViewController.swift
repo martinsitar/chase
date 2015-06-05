@@ -29,24 +29,41 @@ class ViewController: UIViewController {
     var player2:AVAudioPlayer = AVAudioPlayer()
     var player3:AVAudioPlayer = AVAudioPlayer()
     var player4:AVAudioPlayer = AVAudioPlayer()
+    var player5:AVAudioPlayer = AVAudioPlayer()
     
     
     // This function plays the countdown sound
     func playTimer() {
         // Set up the audio player to play the timer audio
         var audioPath = NSBundle.mainBundle().pathForResource("momentum", ofType: "mp3")!
+        var audioPath2 = NSBundle.mainBundle().pathForResource("momentum-2", ofType: "mp3")!
+        var audioPath3 = NSBundle.mainBundle().pathForResource("momentum-3", ofType: "mp3")!
         var error : NSError? = nil
         
         player = AVAudioPlayer(contentsOfURL: NSURL(string: audioPath), error: &error)
         
-        player.volume = 0.6
+        player.volume = 1
         player.numberOfLoops = -1
+        player.prepareToPlay()
         
-        if gameIsRunning == true {
+        player4 = AVAudioPlayer(contentsOfURL: NSURL(string: audioPath2), error: &error)
+        
+        player4.volume = 1
+        player4.numberOfLoops = -1
+        player4.prepareToPlay()
+        
+        player5 = AVAudioPlayer(contentsOfURL: NSURL(string: audioPath3), error: &error)
+        
+        player5.volume = 1
+        player5.numberOfLoops = -1
+        player5.prepareToPlay()
+        
+        /* if gameIsRunning == true {
+            player.prepareToPlay()
             player.play()
         } else if gameIsRunning == false {
             player.stop()
-        }
+        } */
     }
     
     // Plays the winning sound
@@ -61,6 +78,20 @@ class ViewController: UIViewController {
         }
     }
     
+    // Plays the buzzer
+    func playBuzzer() {
+        var audioPath = NSBundle.mainBundle().pathForResource("buzzer", ofType: "mp3")!
+        var error : NSError? = nil
+        
+        player3 = AVAudioPlayer(contentsOfURL: NSURL(string: audioPath), error: &error)
+        
+        player3.prepareToPlay()
+        
+        if error == nil {
+            player3.play()
+        }
+    }
+    
     // timer to keep track of the rest period in between sets
     func updateTime() {
         // First statement resets everything before the session ran. Stop & reset the timer, show the start button, change it to continue. Set the game running variable to false, send user to record the score on the other vc.
@@ -70,17 +101,11 @@ class ViewController: UIViewController {
             gameIsRunning = false
             performSegueWithIdentifier("scoreEntry", sender: self)
             player.stop()
-            
-        } else if timeLimit < 30 && timeLimit > 10 {
-            timeLimit--
-            //println("Hurry up!")
-        } else if timeLimit < 10 {
-            timeLimit--
-            println("HURRRY!")
+            playBuzzer()
         } else {
             timeLimit--
             println(timeLimit)
-            playTimer()
+            player.play()
         }
 
     }
@@ -111,12 +136,6 @@ class ViewController: UIViewController {
         // Set the labels on the main screen to current score.
         teamAScore.text = "\(pointsA)"
         teamBScore.text = "\(pointsB)"
-        
-        if pointsA == 8 || pointsB == 8 {
-            println("Game Over!")
-            playWinner()
-            performSegueWithIdentifier("showWinner", sender: self)
-        }
         
         startButton.hidden = false
         startButton.setTitle("Continue", forState: UIControlState.Normal)
@@ -149,6 +168,8 @@ class ViewController: UIViewController {
         
         // Generate a random word
         randomWord()
+        
+        playTimer()
     }
     
 }
