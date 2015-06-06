@@ -8,10 +8,11 @@
 
 import UIKit
 import AVFoundation
+import AudioToolbox
 
 var pointsA = 0
 var pointsB = 0
-var winningScore = 6
+var winningScore = 2
 
 class PointRecord: UIViewController {
 
@@ -41,6 +42,10 @@ class PointRecord: UIViewController {
         } else if gameIsRunning == false {
         player.stop()
         } */
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+    AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
     }
     
     

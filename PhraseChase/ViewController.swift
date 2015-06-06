@@ -8,7 +8,9 @@
 
 import UIKit
 import AVFoundation
-import AudioToolbox
+
+
+var gameIsRunning = false
 
 class ViewController: UIViewController {
 
@@ -21,42 +23,26 @@ class ViewController: UIViewController {
     var keyCount = gameWords.count
     var randomNumber = 0
     var timer = NSTimer()
-    var timeLimit = arc4random_uniform(10)+60
-    var gameIsRunning = false
     var randomKey = ""
     var randomVal: AnyObject!
+    var timeLimit = 60
     var player:AVAudioPlayer = AVAudioPlayer()
     var player2:AVAudioPlayer = AVAudioPlayer()
     var player3:AVAudioPlayer = AVAudioPlayer()
-    var player4:AVAudioPlayer = AVAudioPlayer()
-    var player5:AVAudioPlayer = AVAudioPlayer()
     
     
     // This function plays the countdown sound
     func playTimer() {
         // Set up the audio player to play the timer audio
         var audioPath = NSBundle.mainBundle().pathForResource("momentum", ofType: "mp3")!
-        var audioPath2 = NSBundle.mainBundle().pathForResource("momentum-2", ofType: "mp3")!
-        var audioPath3 = NSBundle.mainBundle().pathForResource("momentum-3", ofType: "mp3")!
         var error : NSError? = nil
         
         player = AVAudioPlayer(contentsOfURL: NSURL(string: audioPath), error: &error)
         
         player.volume = 1
+        player.enableRate = true
         player.numberOfLoops = -1
         player.prepareToPlay()
-        
-        player4 = AVAudioPlayer(contentsOfURL: NSURL(string: audioPath2), error: &error)
-        
-        player4.volume = 1
-        player4.numberOfLoops = -1
-        player4.prepareToPlay()
-        
-        player5 = AVAudioPlayer(contentsOfURL: NSURL(string: audioPath3), error: &error)
-        
-        player5.volume = 1
-        player5.numberOfLoops = -1
-        player5.prepareToPlay()
         
         /* if gameIsRunning == true {
             player.prepareToPlay()
@@ -90,6 +76,12 @@ class ViewController: UIViewController {
             performSegueWithIdentifier("scoreEntry", sender: self)
             player.stop()
             playBuzzer()
+        } else if timeLimit < 30 && timeLimit > 10 {
+            player.rate = 1.2
+            timeLimit--
+        } else if timeLimit < 10 {
+            player.rate = 1.6
+            timeLimit--
         } else {
             timeLimit--
             println(timeLimit)

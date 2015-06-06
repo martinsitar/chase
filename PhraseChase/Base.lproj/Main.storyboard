@@ -15,9 +15,9 @@
             <string>LilitaOne</string>
             <string>LilitaOne</string>
             <string>LilitaOne</string>
+            <string>LilitaOne</string>
         </mutableArray>
         <mutableArray key="VarelaRound-Regular.ttf">
-            <string>VarelaRound-Regular</string>
             <string>VarelaRound-Regular</string>
             <string>VarelaRound-Regular</string>
         </mutableArray>
@@ -109,13 +109,6 @@
                                 <connections>
                                     <action selector="startButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="XQM-4s-i4j"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r6c-Vk-fVa">
-                                <rect key="frame" x="16" y="28" width="98" height="50"/>
-                                <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="15"/>
-                                <state key="normal" title="Test">
-                                    <color key="titleColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.17717251181602478" green="0.17751896381378174" blue="0.22971495985984802" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -210,6 +203,20 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ARS-2Z-Hxl">
+                                <rect key="frame" x="194" y="243" width="180" height="45"/>
+                                <color key="backgroundColor" red="0.46409195660000002" green="0.76804089549999999" blue="0.14093014600000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="LilitaOne" family="Lilita One" pointSize="24"/>
+                                <inset key="contentEdgeInsets" minX="20" minY="5" maxX="20" maxY="5"/>
+                                <state key="normal" title="PLAY AGAIN">
+                                    <color key="titleColor" red="0.99990516900000004" green="1" blue="0.99987047910000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playAgainPressed:" destination="WUF-55-eDL" eventType="touchUpInside" id="jLH-1i-8et"/>
+                                    <segue destination="vXZ-lx-hvc" kind="modal" modalTransitionStyle="crossDissolve" id="Y3C-Vm-VDO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -219,6 +226,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="8TD-UM-79c"/>
                     <connections>
+                        <outlet property="playAgainButton" destination="ARS-2Z-Hxl" id="qQ8-OT-OCO"/>
                         <outlet property="winnerLabel" destination="q7K-IF-tx8" id="dt9-hu-8mB"/>
                     </connections>
                 </viewController>
@@ -337,6 +345,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Ux8-O3-GSq"/>
+        <segue reference="Y3C-Vm-VDO"/>
     </inferredMetricsTieBreakers>
 </document>

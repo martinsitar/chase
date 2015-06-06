@@ -13,6 +13,7 @@ import Foundation
 class Winner: UIViewController {
     
     @IBOutlet weak var winnerLabel: UILabel!
+    @IBOutlet weak var playAgainButton: UIButton!
     
     var player2:AVAudioPlayer = AVAudioPlayer()
     
@@ -22,7 +23,6 @@ class Winner: UIViewController {
         var error : NSError? = nil
         
         player2 = AVAudioPlayer(contentsOfURL: NSURL(string: audioPath), error: &error)
-        
         
         if error == nil {
             player2.play()
@@ -39,5 +39,13 @@ class Winner: UIViewController {
         }
     }
 
+    @IBAction func playAgainPressed(sender: AnyObject) {
+        pointsA = 0
+        pointsB = 0
+        gameIsRunning = false
+        
+    }
+    
+    
     
 }
