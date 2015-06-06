@@ -193,6 +193,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tCD-5l-uIz">
+                                <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q7K-IF-tx8">
                                 <rect key="frame" x="56" y="130" width="456" height="59"/>
                                 <constraints>
@@ -200,10 +203,10 @@
                                     <constraint firstAttribute="width" constant="456" id="rjY-6l-2SI"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="LilitaOne" family="Lilita One" pointSize="46"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ARS-2Z-Hxl">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ARS-2Z-Hxl">
                                 <rect key="frame" x="194" y="243" width="180" height="45"/>
                                 <color key="backgroundColor" red="0.46409195660000002" green="0.76804089549999999" blue="0.14093014600000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="LilitaOne" family="Lilita One" pointSize="24"/>
@@ -221,11 +224,17 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerY" secondItem="q7K-IF-tx8" secondAttribute="centerY" id="Q19-ts-nxW"/>
+                            <constraint firstItem="tCD-5l-uIz" firstAttribute="centerX" secondItem="q7K-IF-tx8" secondAttribute="centerX" id="RwL-KR-OqE"/>
+                            <constraint firstItem="tCD-5l-uIz" firstAttribute="centerX" secondItem="ARS-2Z-Hxl" secondAttribute="centerX" id="f64-tW-7K6"/>
+                            <constraint firstItem="tCD-5l-uIz" firstAttribute="leading" secondItem="8jB-3R-tIV" secondAttribute="leading" id="gj9-he-z7B"/>
+                            <constraint firstItem="tCD-5l-uIz" firstAttribute="top" secondItem="8jB-3R-tIV" secondAttribute="top" id="hVA-K6-MVS"/>
                             <constraint firstAttribute="centerX" secondItem="q7K-IF-tx8" secondAttribute="centerX" id="lgU-zt-CfG"/>
+                            <constraint firstItem="tCD-5l-uIz" firstAttribute="bottom" secondItem="DSo-83-snl" secondAttribute="top" id="sea-dI-MtF"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8TD-UM-79c"/>
                     <connections>
+                        <outlet property="backgroundImage" destination="tCD-5l-uIz" id="fRs-XW-qDG"/>
                         <outlet property="playAgainButton" destination="ARS-2Z-Hxl" id="qQ8-OT-OCO"/>
                         <outlet property="winnerLabel" destination="q7K-IF-tx8" id="dt9-hu-8mB"/>
                     </connections>

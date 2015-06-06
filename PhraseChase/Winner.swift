@@ -14,6 +14,7 @@ class Winner: UIViewController {
     
     @IBOutlet weak var winnerLabel: UILabel!
     @IBOutlet weak var playAgainButton: UIButton!
+    @IBOutlet weak var backgroundImage: UIImageView!
     
     var player2:AVAudioPlayer = AVAudioPlayer()
     
@@ -34,8 +35,10 @@ class Winner: UIViewController {
         
         if pointsA > pointsB {
             winnerLabel.text = "TEAM A WINS!"
+            backgroundImage.image = UIImage(named: ("teamAbg"))
         } else {
             winnerLabel.text = "TEAM B WINS!"
+            backgroundImage.image = UIImage(named: ("teamBbg"))
         }
     }
 
