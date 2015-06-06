@@ -19,6 +19,7 @@
         <mutableArray key="VarelaRound-Regular.ttf">
             <string>VarelaRound-Regular</string>
             <string>VarelaRound-Regular</string>
+            <string>VarelaRound-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -108,6 +109,13 @@
                                 <connections>
                                     <action selector="startButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="XQM-4s-i4j"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r6c-Vk-fVa">
+                                <rect key="frame" x="16" y="28" width="98" height="50"/>
+                                <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="15"/>
+                                <state key="normal" title="Test">
+                                    <color key="titleColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.17717251181602478" green="0.17751896381378174" blue="0.22971495985984802" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

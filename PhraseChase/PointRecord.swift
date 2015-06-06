@@ -11,7 +11,7 @@ import AVFoundation
 
 var pointsA = 0
 var pointsB = 0
-var winningScore = 8
+var winningScore = 6
 
 class PointRecord: UIViewController {
 
@@ -47,30 +47,34 @@ class PointRecord: UIViewController {
     @IBAction func teamAButtonPressed(sender: AnyObject) {
         pointsA++
         println(pointsA)
-        playPoint()
+        
+        
         
         if pointsA == winningScore || pointsB == winningScore {
             println("Game Over!")
             performSegueWithIdentifier("showWinner", sender: self)
         } else {
             performSegueWithIdentifier("teamAPoint", sender: self)
+            playPoint()
         }
-            
+
     }
     
     
     @IBAction func teamBButtonPressed(sender: AnyObject) {
         pointsB++
         println(pointsB)
-        playPoint()
+        
+
         
         if pointsA == winningScore || pointsB == winningScore {
             println("Game Over!")
             performSegueWithIdentifier("showWinner", sender: self)
         } else {
             performSegueWithIdentifier("teamBPoint", sender: self)
+            playPoint()
         }
-        
+
     }
     
     
