@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var teamAScore: UILabel!
     @IBOutlet weak var teamBScore: UILabel!
     @IBOutlet weak var skipButton: UIButton!
+    @IBOutlet weak var restartButton: UIButton!
     
     var keyCount = gameWords.count
     var randomNumber = 0
@@ -136,6 +137,7 @@ class ViewController: UIViewController {
         skipButton.layer.cornerRadius = 27
         startButton.hidden = false
         skipButton.hidden = true
+        restartButton.hidden = false
         if gameIsRunning == true {
             startButton.setTitle("CONTINUE", forState: UIControlState.Normal)
         } else {
@@ -173,6 +175,7 @@ class ViewController: UIViewController {
     @IBAction func startButtonPressed(sender: AnyObject) {
         
         startButton.hidden = true
+        restartButton.hidden = true
         skipButton.hidden = false
         gameIsRunning = true
         timeIsRunning = true
@@ -185,5 +188,14 @@ class ViewController: UIViewController {
         randomWord()
         playTimer()
     }
+    
+    @IBAction func restartButtonPressed(sender: AnyObject) {
+        pointsA = 0
+        pointsB = 0
+        timeIsRunning = false
+        teamAScore.text = "\(pointsA)"
+        teamBScore.text = "\(pointsB)"
+    }
+    
     
 }

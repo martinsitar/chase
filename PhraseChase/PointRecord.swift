@@ -13,7 +13,7 @@ import iAd
 
 var pointsA = 0
 var pointsB = 0
-var winningScore = 6
+var winningScore = 3
 
 class PointRecord: UIViewController, ADBannerViewDelegate {
 
@@ -98,6 +98,14 @@ class PointRecord: UIViewController, ADBannerViewDelegate {
     
     func bannerViewActionShouldBegin(banner: ADBannerView!, willLeaveApplication willLeave: Bool) -> Bool {
         return true
+    }
+    
+    func bannerView(banner: ADBannerView!, didFailToReceiveAdWithError error: NSError!) {
+        NSLog("Error!")
+    }
+    
+    func bannerViewWillLoadAd(banner: ADBannerView!) {
+        
     }
     
     func bannerViewDidLoadAd(banner: ADBannerView!) {

@@ -21,6 +21,8 @@
         </mutableArray>
         <mutableArray key="VarelaRound-Regular.ttf">
             <string>VarelaRound-Regular</string>
+            <string>VarelaRound-Regular</string>
+            <string>VarelaRound-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -81,14 +83,15 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PMK-M5-jvT">
                                 <rect key="frame" x="209" y="243" width="151" height="55"/>
+                                <color key="backgroundColor" red="0.54014140367507935" green="0.73181658983230591" blue="0.17479786276817322" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="FZ5-HJ-jOt"/>
                                     <constraint firstAttribute="width" constant="151" id="v9F-7y-Pg8"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="LilitaOne" family="Lilita One" pointSize="30"/>
-                                <inset key="contentEdgeInsets" minX="25" minY="10" maxX="25" maxY="10"/>
-                                <state key="normal" title="SKIP">
-                                    <color key="titleColor" red="0.59850305318832397" green="0.59819477796554565" blue="0.62261217832565308" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="10" maxX="40" maxY="10"/>
+                                <state key="normal" title="NEXT">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -139,34 +142,66 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fzF-OZ-VO2">
+                                <rect key="frame" x="447" y="10" width="105" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="105" id="ACG-NH-2ZL"/>
+                                    <constraint firstAttribute="height" constant="30" id="C38-MF-KZ2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="15"/>
+                                <state key="normal" title="Restart Game">
+                                    <color key="titleColor" red="0.59850305318832397" green="0.59819477796554565" blue="0.62261217832565308" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="restartButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="WgL-DP-RlX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9sY-cq-eBv">
+                                <rect key="frame" x="11" y="10" width="94" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="94" id="6Va-my-n36"/>
+                                    <constraint firstAttribute="height" constant="30" id="xLf-Hq-0uC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="15"/>
+                                <state key="normal" title="How to Play">
+                                    <color key="titleColor" red="0.59850305318832397" green="0.59819477796554565" blue="0.62261217832565308" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.17717251181602478" green="0.17751896381378174" blue="0.22971495985984802" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="PMK-M5-jvT" secondAttribute="centerX" id="5EQ-Am-4Ii"/>
                             <constraint firstItem="eDf-il-fSO" firstAttribute="top" secondItem="PMK-M5-jvT" secondAttribute="bottom" constant="22" id="Dkk-nw-j6W"/>
                             <constraint firstItem="vKQ-0j-qn5" firstAttribute="leading" secondItem="MyW-T0-Gj3" secondAttribute="trailing" constant="-80" id="FDZ-LC-6t2"/>
+                            <constraint firstItem="9sY-cq-eBv" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-5" id="FZa-JS-U1L"/>
                             <constraint firstItem="zIN-8m-PR4" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="KwB-E0-qsI"/>
                             <constraint firstAttribute="centerY" secondItem="zIN-8m-PR4" secondAttribute="centerY" id="MLO-Z9-hfa"/>
                             <constraint firstAttribute="trailingMargin" secondItem="MyW-T0-Gj3" secondAttribute="trailing" constant="-16" id="MmY-4V-Eqt"/>
                             <constraint firstItem="zIN-8m-PR4" firstAttribute="leading" secondItem="kjJ-Wh-h6d" secondAttribute="trailing" constant="-82" id="Mpy-Ck-AuF"/>
                             <constraint firstItem="zIN-8m-PR4" firstAttribute="leading" secondItem="dyQ-UU-klL" secondAttribute="trailing" constant="-62" id="NgY-AA-zd9"/>
+                            <constraint firstItem="fzF-OZ-VO2" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="Oar-VM-W6v"/>
                             <constraint firstItem="m8i-Le-LDq" firstAttribute="top" secondItem="MyW-T0-Gj3" secondAttribute="bottom" constant="-51" id="PLm-I9-z9Q"/>
                             <constraint firstAttribute="centerX" secondItem="GYl-1m-g4z" secondAttribute="centerX" id="PZ3-ni-WH2"/>
                             <constraint firstItem="MyW-T0-Gj3" firstAttribute="top" secondItem="vKQ-0j-qn5" secondAttribute="bottom" constant="-32" id="Qbk-Cq-EiO"/>
                             <constraint firstItem="dyQ-UU-klL" firstAttribute="top" secondItem="zIN-8m-PR4" secondAttribute="bottom" constant="-50" id="QtT-q9-wSQ"/>
                             <constraint firstItem="zIN-8m-PR4" firstAttribute="top" secondItem="kjJ-Wh-h6d" secondAttribute="bottom" constant="-33" id="TDb-1b-bIm"/>
+                            <constraint firstItem="fzF-OZ-VO2" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" constant="10" id="cSw-uv-UtH"/>
                             <constraint firstAttribute="centerX" secondItem="AtC-3a-uQR" secondAttribute="centerX" id="dKp-pD-pwl"/>
                             <constraint firstAttribute="centerY" secondItem="AtC-3a-uQR" secondAttribute="centerY" id="hKc-ed-Ib7"/>
                             <constraint firstItem="eDf-il-fSO" firstAttribute="top" secondItem="Nq8-z1-VGa" secondAttribute="bottom" constant="22" id="hpN-Dk-Y2x"/>
                             <constraint firstItem="m8i-Le-LDq" firstAttribute="leading" secondItem="MyW-T0-Gj3" secondAttribute="trailing" constant="-62" id="j44-tS-dFc"/>
                             <constraint firstAttribute="centerX" secondItem="Nq8-z1-VGa" secondAttribute="centerX" id="jxq-NM-lJI"/>
                             <constraint firstAttribute="centerY" secondItem="MyW-T0-Gj3" secondAttribute="centerY" id="lqz-mZ-wCC"/>
+                            <constraint firstItem="9sY-cq-eBv" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" constant="10" id="mTK-aP-583"/>
                             <constraint firstAttribute="centerY" secondItem="GYl-1m-g4z" secondAttribute="centerY" id="q1x-Dr-nLB"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="yvY-If-0rC"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
+                        <outlet property="restartButton" destination="fzF-OZ-VO2" id="PO3-tH-ByC"/>
                         <outlet property="skipButton" destination="PMK-M5-jvT" id="bOp-PY-UnX"/>
                         <outlet property="startButton" destination="Nq8-z1-VGa" id="cDV-6b-QW1"/>
                         <outlet property="teamAScore" destination="dyQ-UU-klL" id="pDP-jz-lF2"/>
@@ -319,6 +354,8 @@
                             </button>
                             <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="Upd-wb-eCf">
                                 <rect key="frame" x="124" y="270" width="320" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="NWH-F3-hkE"/>
                                     <constraint firstAttribute="width" constant="320" id="uhI-rA-nVZ"/>
