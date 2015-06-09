@@ -16,6 +16,7 @@
             <string>LilitaOne</string>
             <string>LilitaOne</string>
             <string>LilitaOne</string>
+            <string>LilitaOne</string>
         </mutableArray>
         <mutableArray key="VarelaRound-Regular.ttf">
             <string>VarelaRound-Regular</string>
@@ -77,7 +78,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="GYl-1m-g4z">
-                                <rect key="frame" x="189" y="158" width="290" height="60"/>
+                                <rect key="frame" x="188" y="158" width="290" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="290" id="MuX-k9-gKs"/>
                                     <constraint firstAttribute="height" constant="60" id="trD-LJ-EaS"/>
@@ -97,11 +98,26 @@
                                     <segue destination="inG-7B-htd" kind="modal" id="081-ha-cjK"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nq8-z1-VGa">
-                                <rect key="frame" x="230" y="270" width="207" height="55"/>
-                                <color key="backgroundColor" red="0.464091956615448" green="0.76804089546203613" blue="0.14093014597892761" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PMK-M5-jvT">
+                                <rect key="frame" x="258" y="270" width="151" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="151" id="kuZ-1z-WLJ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="LilitaOne" family="Lilita One" pointSize="30"/>
                                 <inset key="contentEdgeInsets" minX="25" minY="10" maxX="25" maxY="10"/>
+                                <state key="normal" title="SKIP">
+                                    <color key="titleColor" red="0.59850305318832397" green="0.59819477796554565" blue="0.62261217832565308" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="skipButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="mdm-TW-W8l"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nq8-z1-VGa">
+                                <rect key="frame" x="215" y="270" width="237" height="55"/>
+                                <color key="backgroundColor" red="0.464091956615448" green="0.76804089546203613" blue="0.14093014597892761" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="LilitaOne" family="Lilita One" pointSize="30"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="10" maxX="40" maxY="10"/>
                                 <state key="normal" title="LET'S START">
                                     <color key="titleColor" red="0.99990516901016235" green="1" blue="0.99987047910690308" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -114,9 +130,11 @@
                         <color key="backgroundColor" red="0.17717251181602478" green="0.17751896381378174" blue="0.22971495985984802" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="AtC-3a-uQR" firstAttribute="centerY" secondItem="MyW-T0-Gj3" secondAttribute="centerY" id="213-hb-DQl"/>
+                            <constraint firstItem="PMK-M5-jvT" firstAttribute="baseline" secondItem="Nq8-z1-VGa" secondAttribute="baseline" id="2lK-Ir-KKs"/>
                             <constraint firstAttribute="centerY" secondItem="zIN-8m-PR4" secondAttribute="centerY" id="9Ti-mZ-sXk"/>
                             <constraint firstItem="MyW-T0-Gj3" firstAttribute="leading" secondItem="AtC-3a-uQR" secondAttribute="trailing" constant="-116" id="GL7-ZV-q6t"/>
                             <constraint firstAttribute="centerY" secondItem="GYl-1m-g4z" secondAttribute="centerY" id="RdH-iq-dtV"/>
+                            <constraint firstItem="PMK-M5-jvT" firstAttribute="centerX" secondItem="Nq8-z1-VGa" secondAttribute="centerX" id="TV5-dp-yf8"/>
                             <constraint firstItem="AtC-3a-uQR" firstAttribute="trailing" secondItem="MyW-T0-Gj3" secondAttribute="trailing" id="g1q-a7-0iI"/>
                             <constraint firstAttribute="centerX" secondItem="Nq8-z1-VGa" secondAttribute="centerX" id="g4m-CY-LlM"/>
                             <constraint firstItem="AtC-3a-uQR" firstAttribute="centerX" secondItem="Nq8-z1-VGa" secondAttribute="centerX" id="jxU-wc-UAS"/>
@@ -132,6 +150,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="667" height="375"/>
                     <connections>
+                        <outlet property="skipButton" destination="PMK-M5-jvT" id="bOp-PY-UnX"/>
                         <outlet property="startButton" destination="Nq8-z1-VGa" id="cDV-6b-QW1"/>
                         <outlet property="teamAScore" destination="dyQ-UU-klL" id="pDP-jz-lF2"/>
                         <outlet property="teamBScore" destination="m8i-Le-LDq" id="yfy-O7-fdQ"/>
@@ -206,11 +225,16 @@
                                 <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ARS-2Z-Hxl">
-                                <rect key="frame" x="194" y="243" width="180" height="45"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ARS-2Z-Hxl">
+                                <rect key="frame" x="164" y="240" width="240" height="45"/>
                                 <color key="backgroundColor" red="0.46409195660000002" green="0.76804089549999999" blue="0.14093014600000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="Cd0-dP-OQb"/>
+                                    <constraint firstAttribute="width" constant="240" id="JVd-Ok-HSs"/>
+                                    <constraint firstAttribute="height" constant="45" id="SBE-da-NSx"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="LilitaOne" family="Lilita One" pointSize="24"/>
-                                <inset key="contentEdgeInsets" minX="20" minY="5" maxX="20" maxY="5"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="5" maxX="40" maxY="5"/>
                                 <state key="normal" title="PLAY AGAIN">
                                     <color key="titleColor" red="0.99990516900000004" green="1" blue="0.99987047910000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -225,10 +249,12 @@
                         <constraints>
                             <constraint firstAttribute="centerY" secondItem="q7K-IF-tx8" secondAttribute="centerY" id="Q19-ts-nxW"/>
                             <constraint firstItem="tCD-5l-uIz" firstAttribute="centerX" secondItem="q7K-IF-tx8" secondAttribute="centerX" id="RwL-KR-OqE"/>
+                            <constraint firstItem="ARS-2Z-Hxl" firstAttribute="top" secondItem="q7K-IF-tx8" secondAttribute="bottom" constant="51" id="Yi6-d5-7he"/>
                             <constraint firstItem="tCD-5l-uIz" firstAttribute="centerX" secondItem="ARS-2Z-Hxl" secondAttribute="centerX" id="f64-tW-7K6"/>
                             <constraint firstItem="tCD-5l-uIz" firstAttribute="leading" secondItem="8jB-3R-tIV" secondAttribute="leading" id="gj9-he-z7B"/>
                             <constraint firstItem="tCD-5l-uIz" firstAttribute="top" secondItem="8jB-3R-tIV" secondAttribute="top" id="hVA-K6-MVS"/>
                             <constraint firstAttribute="centerX" secondItem="q7K-IF-tx8" secondAttribute="centerX" id="lgU-zt-CfG"/>
+                            <constraint firstItem="DSo-83-snl" firstAttribute="top" secondItem="ARS-2Z-Hxl" secondAttribute="bottom" constant="35" id="nma-mJ-5kG"/>
                             <constraint firstItem="tCD-5l-uIz" firstAttribute="bottom" secondItem="DSo-83-snl" secondAttribute="top" id="sea-dI-MtF"/>
                         </constraints>
                     </view>
@@ -279,14 +305,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6sv-MW-Xg0">
-                                <rect key="frame" x="139" y="191" width="115" height="40"/>
+                                <rect key="frame" x="83" y="191" width="180" height="40"/>
                                 <color key="backgroundColor" red="0.23692223429679871" green="0.68653029203414917" blue="0.97770875692367554" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="sXs-wV-x9Q"/>
-                                    <constraint firstAttribute="width" constant="115" id="y9B-GZ-pzA"/>
+                                    <constraint firstAttribute="width" constant="180" id="y9B-GZ-pzA"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="LilitaOne" family="Lilita One" pointSize="24"/>
-                                <inset key="contentEdgeInsets" minX="20" minY="20" maxX="20" maxY="20"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                 <state key="normal" title="Team A">
                                     <color key="titleColor" red="0.99990516901016235" green="1" blue="0.99987047910690308" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -296,14 +322,14 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ydx-jZ-P5o">
-                                <rect key="frame" x="316" y="191" width="113" height="40"/>
+                                <rect key="frame" x="306" y="191" width="180" height="40"/>
                                 <color key="backgroundColor" red="0.87847292423248291" green="0.26552549004554749" blue="0.30613604187965393" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="qNl-hX-MiW"/>
-                                    <constraint firstAttribute="width" constant="113" id="yYH-nO-oRh"/>
+                                    <constraint firstAttribute="width" constant="180" id="yYH-nO-oRh"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="LilitaOne" family="Lilita One" pointSize="24"/>
-                                <inset key="contentEdgeInsets" minX="20" minY="20" maxX="20" maxY="20"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                 <state key="normal" title="Team B">
                                     <color key="titleColor" red="0.99990516901016235" green="1" blue="0.99987047910690308" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -316,13 +342,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="K4W-in-WXW" firstAttribute="top" secondItem="wT6-XT-lfy" secondAttribute="bottom" constant="-100" id="3VW-5P-GJI"/>
-                            <constraint firstItem="K4W-in-WXW" firstAttribute="leading" secondItem="6sv-MW-Xg0" secondAttribute="trailing" constant="-254" id="7XR-sk-x9T"/>
+                            <constraint firstItem="K4W-in-WXW" firstAttribute="leading" secondItem="6sv-MW-Xg0" secondAttribute="trailing" constant="-263" id="7XR-sk-x9T"/>
                             <constraint firstItem="YXU-aS-FcX" firstAttribute="top" secondItem="wT6-XT-lfy" secondAttribute="bottom" constant="-12" id="CIf-DX-93v"/>
                             <constraint firstAttribute="centerX" secondItem="wT6-XT-lfy" secondAttribute="centerX" id="FzS-bx-oHG"/>
                             <constraint firstItem="6sv-MW-Xg0" firstAttribute="top" secondItem="K4W-in-WXW" secondAttribute="bottom" constant="-129" id="KDH-Rw-OjN"/>
                             <constraint firstItem="K4W-in-WXW" firstAttribute="leading" secondItem="jgA-DG-yrl" secondAttribute="leading" id="N4w-fh-4US"/>
                             <constraint firstAttribute="centerX" secondItem="YXU-aS-FcX" secondAttribute="centerX" id="OEl-JN-INH"/>
-                            <constraint firstItem="ydx-jZ-P5o" firstAttribute="leading" secondItem="K4W-in-WXW" secondAttribute="trailing" constant="-252" id="Zyb-c3-nvv"/>
+                            <constraint firstItem="ydx-jZ-P5o" firstAttribute="leading" secondItem="K4W-in-WXW" secondAttribute="trailing" constant="-262" id="Zyb-c3-nvv"/>
                             <constraint firstItem="ydx-jZ-P5o" firstAttribute="top" secondItem="K4W-in-WXW" secondAttribute="bottom" constant="-129" id="avG-eR-srT"/>
                             <constraint firstItem="K4W-in-WXW" firstAttribute="bottom" secondItem="b68-WV-cjX" secondAttribute="top" id="gdL-fs-tGU"/>
                             <constraint firstItem="K4W-in-WXW" firstAttribute="top" secondItem="jgA-DG-yrl" secondAttribute="top" id="o9x-b9-aLl"/>

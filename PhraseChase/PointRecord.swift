@@ -12,7 +12,7 @@ import AudioToolbox
 
 var pointsA = 0
 var pointsB = 0
-var winningScore = 2
+var winningScore = 6
 
 class PointRecord: UIViewController {
 
@@ -48,6 +48,10 @@ class PointRecord: UIViewController {
     AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
     }
     
+    override func viewWillAppear(animated: Bool) {
+        teamAButton.layer.cornerRadius = 20
+        teamBButton.layer.cornerRadius = 20
+    }
     
     @IBAction func teamAButtonPressed(sender: AnyObject) {
         pointsA++
@@ -58,6 +62,7 @@ class PointRecord: UIViewController {
         if pointsA == winningScore || pointsB == winningScore {
             println("Game Over!")
             performSegueWithIdentifier("showWinner", sender: self)
+            gameIsRunning = false
         } else {
             performSegueWithIdentifier("teamAPoint", sender: self)
             playPoint()
@@ -75,6 +80,7 @@ class PointRecord: UIViewController {
         if pointsA == winningScore || pointsB == winningScore {
             println("Game Over!")
             performSegueWithIdentifier("showWinner", sender: self)
+            gameIsRunning = false
         } else {
             performSegueWithIdentifier("teamBPoint", sender: self)
             playPoint()

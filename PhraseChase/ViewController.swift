@@ -10,6 +10,7 @@ import UIKit
 import AVFoundation
 
 
+var timeIsRunning = false
 var gameIsRunning = false
 
 class ViewController: UIViewController {
@@ -19,17 +20,18 @@ class ViewController: UIViewController {
     @IBOutlet weak var wordDisplayLabel: UILabel!
     @IBOutlet weak var teamAScore: UILabel!
     @IBOutlet weak var teamBScore: UILabel!
+    @IBOutlet weak var skipButton: UIButton!
     
     var keyCount = gameWords.count
     var randomNumber = 0
     var timer = NSTimer()
     var randomKey = ""
     var randomVal: AnyObject!
-    var timeLimit = 10
+    var timeLimit = 65
     var player:AVAudioPlayer = AVAudioPlayer()
     var player2:AVAudioPlayer = AVAudioPlayer()
     var player3:AVAudioPlayer = AVAudioPlayer()
-    
+    var player4:AVAudioPlayer = AVAudioPlayer()
     
     // This function plays the countdown sound
     func playTimer() {
@@ -44,10 +46,10 @@ class ViewController: UIViewController {
         player.numberOfLoops = -1
         player.prepareToPlay()
         
-        /* if gameIsRunning == true {
+        /* if timeIsRunning == true {
             player.prepareToPlay()
             player.play()
-        } else if gameIsRunning == false {
+        } else if timeIsRunning == false {
             player.stop()
         } */
     }
@@ -66,13 +68,27 @@ class ViewController: UIViewController {
         }
     }
     
+    // Plays the skip sound
+    func playSkip() {
+        var audioPath = NSBundle.mainBundle().pathForResource("skipword", ofType: "mp3")!
+        var error : NSError? = nil
+        
+        player4 = AVAudioPlayer(contentsOfURL: NSURL(string: audioPath), error: &error)
+        
+        player4.prepareToPlay()
+        
+        if error == nil {
+            player4.play()
+        }
+    }
+    
     // timer to keep track of the rest period in between sets
     func updateTime() {
         // First statement resets everything before the session ran. Stop & reset the timer, show the start button, change it to continue. Set the game running variable to false, send user to record the score on the other vc.
         if timeLimit == 0 {
             println("Time's up!")
             timer.invalidate()
-            gameIsRunning = false
+            timeIsRunning = false
             performSegueWithIdentifier("scoreEntry", sender: self)
             player.stop()
             playBuzzer()
@@ -117,9 +133,15 @@ class ViewController: UIViewController {
         teamAScore.text = "\(pointsA)"
         teamBScore.text = "\(pointsB)"
 
-        
+        startButton.layer.cornerRadius = 27
+        skipButton.layer.cornerRadius = 27
         startButton.hidden = false
-        startButton.setTitle("Continue", forState: UIControlState.Normal)
+        skipButton.hidden = true
+        if gameIsRunning == true {
+            startButton.setTitle("CONTINUE", forState: UIControlState.Normal)
+        } else {
+            startButton.setTitle("LET'S START", forState: UIControlState.Normal)
+        }
         
     }
 
@@ -128,20 +150,33 @@ class ViewController: UIViewController {
 
         // Dispose of any resources that can be recreated.
     }
-
+    
+    /*
     override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent) {
         // if the game is running let the shake work, come back to this
-        if gameIsRunning == true {
+        if timeIsRunning == true {
             if event.subtype == UIEventSubtype.MotionShake {
                 randomWord()
             }
         }
     }
+    */
+    
+    @IBAction func skipButtonPressed(sender: AnyObject) {
+        // if the game is running let the shake work, come back to this
+        if timeIsRunning == true {
+                randomWord()
+            }
+        playSkip()
+    }
+    
     
     @IBAction func startButtonPressed(sender: AnyObject) {
         
         startButton.hidden = true
+        skipButton.hidden = false
         gameIsRunning = true
+        timeIsRunning = true
         
         randomNumber = Int(arc4random_uniform(UInt32(keyCount)))
         
@@ -149,7 +184,6 @@ class ViewController: UIViewController {
         
         // Generate a random word
         randomWord()
-        
         playTimer()
     }
     

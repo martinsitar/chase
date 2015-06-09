@@ -40,12 +40,14 @@ class Winner: UIViewController {
             winnerLabel.text = "TEAM B WINS!"
             backgroundImage.image = UIImage(named: ("teamBbg"))
         }
+        
+        playAgainButton.layer.cornerRadius = 22
     }
 
     @IBAction func playAgainPressed(sender: AnyObject) {
         pointsA = 0
         pointsB = 0
-        gameIsRunning = false
+        timeIsRunning = false
         
     }
     
