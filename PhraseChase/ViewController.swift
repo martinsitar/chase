@@ -27,7 +27,7 @@ class ViewController: UIViewController {
     var timer = NSTimer()
     var randomKey = ""
     var randomVal: AnyObject!
-    var timeLimit = 65
+    var timeLimit = 10
     var player:AVAudioPlayer = AVAudioPlayer()
     var player2:AVAudioPlayer = AVAudioPlayer()
     var player3:AVAudioPlayer = AVAudioPlayer()

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="LilitaOne-Regular.ttf">
@@ -20,7 +21,6 @@
         </mutableArray>
         <mutableArray key="VarelaRound-Regular.ttf">
             <string>VarelaRound-Regular</string>
-            <string>VarelaRound-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -33,75 +33,77 @@
                         <viewControllerLayoutGuide type="bottom" id="eDf-il-fSO"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="AtC-3a-uQR">
-                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                                <rect key="frame" x="-107" y="-28" width="782" height="376"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="782" id="Avl-z0-LLp"/>
+                                    <constraint firstAttribute="height" constant="376" id="B2P-De-UHg"/>
+                                </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="teamAimage" translatesAutoresizingMaskIntoConstraints="NO" id="zIN-8m-PR4">
-                                <rect key="frame" x="0.0" y="147" width="116" height="81"/>
+                                <rect key="frame" x="0.0" y="119" width="117" height="81"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="81" id="bdZ-fY-VEI"/>
-                                    <constraint firstAttribute="width" constant="116" id="dDu-Hp-I2W"/>
+                                    <constraint firstAttribute="width" constant="117" id="Yc8-di-Kxm"/>
+                                    <constraint firstAttribute="height" constant="81" id="f5e-Sk-Mx1"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="teamBimage" translatesAutoresizingMaskIntoConstraints="NO" id="MyW-T0-Gj3">
-                                <rect key="frame" x="551" y="147" width="116" height="81"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team A" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kjJ-Wh-h6d">
+                                <rect key="frame" x="19" y="129" width="63" height="23"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="81" id="ajt-O0-Iyt"/>
-                                    <constraint firstAttribute="width" constant="116" id="rdb-Uj-47o"/>
+                                    <constraint firstAttribute="width" constant="63" id="Irh-gY-bJi"/>
                                 </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Team A" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kjJ-Wh-h6d">
-                                <rect key="frame" x="18" y="157" width="63" height="23"/>
                                 <fontDescription key="fontDescription" name="LilitaOne" family="Lilita One" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Team B" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vKQ-0j-qn5">
-                                <rect key="frame" x="587" y="157" width="61" height="23"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team B" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vKQ-0j-qn5">
+                                <rect key="frame" x="488" y="129" width="61" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="23" id="Soz-rE-gpH"/>
+                                    <constraint firstAttribute="width" constant="61" id="zTv-fT-lrX"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="LilitaOne" family="Lilita One" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dyQ-UU-klL">
-                                <rect key="frame" x="37" y="178" width="24" height="42"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dyQ-UU-klL">
+                                <rect key="frame" x="38" y="150" width="24" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="JK9-zW-aDT"/>
+                                    <constraint firstAttribute="width" constant="24" id="XIz-0U-lPe"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="LilitaOne" family="Lilita One" pointSize="36"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m8i-Le-LDq">
-                                <rect key="frame" x="605" y="178" width="24" height="42"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m8i-Le-LDq">
+                                <rect key="frame" x="506" y="150" width="24" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="Bf7-F9-Ubs"/>
+                                    <constraint firstAttribute="width" constant="24" id="ka6-YL-HTo"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="LilitaOne" family="Lilita One" pointSize="36"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="GYl-1m-g4z">
-                                <rect key="frame" x="188" y="158" width="290" height="60"/>
+                                <rect key="frame" x="139" y="130" width="290" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="290" id="MuX-k9-gKs"/>
-                                    <constraint firstAttribute="height" constant="60" id="trD-LJ-EaS"/>
+                                    <constraint firstAttribute="width" constant="290" id="C7Q-0x-ISb"/>
+                                    <constraint firstAttribute="height" constant="60" id="aq1-Nx-nPt"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="LilitaOne" family="Lilita One" pointSize="40"/>
                                 <color key="textColor" red="0.99990516901016235" green="1" blue="0.99987047910690308" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PkT-hH-MNu">
-                                <rect key="frame" x="583" y="20" width="30" height="34"/>
-                                <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="18"/>
-                                <state key="normal">
-                                    <color key="titleColor" red="0.34138205647468567" green="0.3432081937789917" blue="0.40954074263572693" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="inG-7B-htd" kind="modal" id="081-ha-cjK"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PMK-M5-jvT">
-                                <rect key="frame" x="258" y="270" width="151" height="55"/>
+                                <rect key="frame" x="209" y="243" width="151" height="55"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="151" id="kuZ-1z-WLJ"/>
+                                    <constraint firstAttribute="height" constant="55" id="FZ5-HJ-jOt"/>
+                                    <constraint firstAttribute="width" constant="151" id="v9F-7y-Pg8"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="LilitaOne" family="Lilita One" pointSize="30"/>
                                 <inset key="contentEdgeInsets" minX="25" minY="10" maxX="25" maxY="10"/>
@@ -114,8 +116,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nq8-z1-VGa">
-                                <rect key="frame" x="215" y="270" width="237" height="55"/>
+                                <rect key="frame" x="166" y="243" width="237" height="55"/>
                                 <color key="backgroundColor" red="0.464091956615448" green="0.76804089546203613" blue="0.14093014597892761" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="CCF-Np-u3H"/>
+                                    <constraint firstAttribute="width" constant="237" id="oFH-9n-ijW"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="LilitaOne" family="Lilita One" pointSize="30"/>
                                 <inset key="contentEdgeInsets" minX="40" minY="10" maxX="40" maxY="10"/>
                                 <state key="normal" title="LET'S START">
@@ -126,29 +132,40 @@
                                     <action selector="startButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="XQM-4s-i4j"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="teamBimage" translatesAutoresizingMaskIntoConstraints="NO" id="MyW-T0-Gj3">
+                                <rect key="frame" x="452" y="120" width="116" height="81"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="116" id="fHI-FD-pqd"/>
+                                    <constraint firstAttribute="height" constant="81" id="nwV-bq-YIl"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.17717251181602478" green="0.17751896381378174" blue="0.22971495985984802" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="AtC-3a-uQR" firstAttribute="centerY" secondItem="MyW-T0-Gj3" secondAttribute="centerY" id="213-hb-DQl"/>
-                            <constraint firstItem="PMK-M5-jvT" firstAttribute="baseline" secondItem="Nq8-z1-VGa" secondAttribute="baseline" id="2lK-Ir-KKs"/>
-                            <constraint firstAttribute="centerY" secondItem="zIN-8m-PR4" secondAttribute="centerY" id="9Ti-mZ-sXk"/>
-                            <constraint firstItem="MyW-T0-Gj3" firstAttribute="leading" secondItem="AtC-3a-uQR" secondAttribute="trailing" constant="-116" id="GL7-ZV-q6t"/>
-                            <constraint firstAttribute="centerY" secondItem="GYl-1m-g4z" secondAttribute="centerY" id="RdH-iq-dtV"/>
-                            <constraint firstItem="PMK-M5-jvT" firstAttribute="centerX" secondItem="Nq8-z1-VGa" secondAttribute="centerX" id="TV5-dp-yf8"/>
-                            <constraint firstItem="AtC-3a-uQR" firstAttribute="trailing" secondItem="MyW-T0-Gj3" secondAttribute="trailing" id="g1q-a7-0iI"/>
-                            <constraint firstAttribute="centerX" secondItem="Nq8-z1-VGa" secondAttribute="centerX" id="g4m-CY-LlM"/>
-                            <constraint firstItem="AtC-3a-uQR" firstAttribute="centerX" secondItem="Nq8-z1-VGa" secondAttribute="centerX" id="jxU-wc-UAS"/>
-                            <constraint firstAttribute="centerY" secondItem="MyW-T0-Gj3" secondAttribute="centerY" id="kds-YP-YZ8"/>
-                            <constraint firstItem="Nq8-z1-VGa" firstAttribute="top" secondItem="GYl-1m-g4z" secondAttribute="bottom" constant="52" id="qOw-sV-mfP"/>
-                            <constraint firstAttribute="centerX" secondItem="GYl-1m-g4z" secondAttribute="centerX" id="uF8-pm-C5F"/>
-                            <constraint firstItem="AtC-3a-uQR" firstAttribute="bottom" secondItem="eDf-il-fSO" secondAttribute="top" id="uM1-Kn-ZVQ"/>
-                            <constraint firstItem="AtC-3a-uQR" firstAttribute="leading" secondItem="zIN-8m-PR4" secondAttribute="trailing" constant="-116" id="vEx-vb-FjU"/>
+                            <constraint firstAttribute="centerX" secondItem="PMK-M5-jvT" secondAttribute="centerX" id="5EQ-Am-4Ii"/>
+                            <constraint firstItem="eDf-il-fSO" firstAttribute="top" secondItem="PMK-M5-jvT" secondAttribute="bottom" constant="22" id="Dkk-nw-j6W"/>
+                            <constraint firstItem="vKQ-0j-qn5" firstAttribute="leading" secondItem="MyW-T0-Gj3" secondAttribute="trailing" constant="-80" id="FDZ-LC-6t2"/>
+                            <constraint firstItem="zIN-8m-PR4" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="KwB-E0-qsI"/>
+                            <constraint firstAttribute="centerY" secondItem="zIN-8m-PR4" secondAttribute="centerY" id="MLO-Z9-hfa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MyW-T0-Gj3" secondAttribute="trailing" constant="-16" id="MmY-4V-Eqt"/>
+                            <constraint firstItem="zIN-8m-PR4" firstAttribute="leading" secondItem="kjJ-Wh-h6d" secondAttribute="trailing" constant="-82" id="Mpy-Ck-AuF"/>
+                            <constraint firstItem="zIN-8m-PR4" firstAttribute="leading" secondItem="dyQ-UU-klL" secondAttribute="trailing" constant="-62" id="NgY-AA-zd9"/>
+                            <constraint firstItem="m8i-Le-LDq" firstAttribute="top" secondItem="MyW-T0-Gj3" secondAttribute="bottom" constant="-51" id="PLm-I9-z9Q"/>
+                            <constraint firstAttribute="centerX" secondItem="GYl-1m-g4z" secondAttribute="centerX" id="PZ3-ni-WH2"/>
+                            <constraint firstItem="MyW-T0-Gj3" firstAttribute="top" secondItem="vKQ-0j-qn5" secondAttribute="bottom" constant="-32" id="Qbk-Cq-EiO"/>
+                            <constraint firstItem="dyQ-UU-klL" firstAttribute="top" secondItem="zIN-8m-PR4" secondAttribute="bottom" constant="-50" id="QtT-q9-wSQ"/>
+                            <constraint firstItem="zIN-8m-PR4" firstAttribute="top" secondItem="kjJ-Wh-h6d" secondAttribute="bottom" constant="-33" id="TDb-1b-bIm"/>
+                            <constraint firstAttribute="centerX" secondItem="AtC-3a-uQR" secondAttribute="centerX" id="dKp-pD-pwl"/>
+                            <constraint firstAttribute="centerY" secondItem="AtC-3a-uQR" secondAttribute="centerY" id="hKc-ed-Ib7"/>
+                            <constraint firstItem="eDf-il-fSO" firstAttribute="top" secondItem="Nq8-z1-VGa" secondAttribute="bottom" constant="22" id="hpN-Dk-Y2x"/>
+                            <constraint firstItem="m8i-Le-LDq" firstAttribute="leading" secondItem="MyW-T0-Gj3" secondAttribute="trailing" constant="-62" id="j44-tS-dFc"/>
+                            <constraint firstAttribute="centerX" secondItem="Nq8-z1-VGa" secondAttribute="centerX" id="jxq-NM-lJI"/>
+                            <constraint firstAttribute="centerY" secondItem="MyW-T0-Gj3" secondAttribute="centerY" id="lqz-mZ-wCC"/>
+                            <constraint firstAttribute="centerY" secondItem="GYl-1m-g4z" secondAttribute="centerY" id="q1x-Dr-nLB"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="yvY-If-0rC"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="667" height="375"/>
                     <connections>
                         <outlet property="skipButton" destination="PMK-M5-jvT" id="bOp-PY-UnX"/>
                         <outlet property="startButton" destination="Nq8-z1-VGa" id="cDV-6b-QW1"/>
@@ -160,45 +177,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="27.5" y="306.5"/>
-        </scene>
-        <!--Table View Controller-->
-        <scene sceneID="ROw-hk-WQw">
-            <objects>
-                <viewController id="inG-7B-htd" customClass="TableViewController" customModule="PhraseChase" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ABD-SD-HZU"/>
-                        <viewControllerLayoutGuide type="bottom" id="6BS-7Y-06Y"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Rec-0k-ol8">
-                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Xn6-H3-4AJ">
-                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ProtoCell" rowHeight="100" id="hZL-RI-fxM">
-                                        <rect key="frame" x="0.0" y="22" width="568" height="100"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hZL-RI-fxM" id="X8X-2E-RLg">
-                                            <rect key="frame" x="0.0" y="0.0" width="568" height="99"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="inG-7B-htd" id="up2-Eq-P4d"/>
-                                    <outlet property="delegate" destination="inG-7B-htd" id="dPf-PT-S5B"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OQT-xJ-lHy" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="710" y="325"/>
+            <point key="canvasLocation" x="107" y="491"/>
         </scene>
         <!--Winner-->
         <scene sceneID="zpr-QB-8jC">
@@ -218,8 +197,8 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q7K-IF-tx8">
                                 <rect key="frame" x="56" y="130" width="456" height="59"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="59" id="B4e-DU-tjF"/>
-                                    <constraint firstAttribute="width" constant="456" id="rjY-6l-2SI"/>
+                                    <constraint firstAttribute="height" constant="59" id="Wrc-w4-egQ"/>
+                                    <constraint firstAttribute="width" constant="456" id="dVd-qG-0iv"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="LilitaOne" family="Lilita One" pointSize="46"/>
                                 <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
@@ -229,9 +208,8 @@
                                 <rect key="frame" x="164" y="240" width="240" height="45"/>
                                 <color key="backgroundColor" red="0.46409195660000002" green="0.76804089549999999" blue="0.14093014600000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="Cd0-dP-OQb"/>
-                                    <constraint firstAttribute="width" constant="240" id="JVd-Ok-HSs"/>
-                                    <constraint firstAttribute="height" constant="45" id="SBE-da-NSx"/>
+                                    <constraint firstAttribute="width" constant="240" id="45U-T5-5q4"/>
+                                    <constraint firstAttribute="height" constant="45" id="ioK-K1-lM4"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="LilitaOne" family="Lilita One" pointSize="24"/>
                                 <inset key="contentEdgeInsets" minX="40" minY="5" maxX="40" maxY="5"/>
@@ -247,15 +225,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerY" secondItem="q7K-IF-tx8" secondAttribute="centerY" id="Q19-ts-nxW"/>
-                            <constraint firstItem="tCD-5l-uIz" firstAttribute="centerX" secondItem="q7K-IF-tx8" secondAttribute="centerX" id="RwL-KR-OqE"/>
-                            <constraint firstItem="ARS-2Z-Hxl" firstAttribute="top" secondItem="q7K-IF-tx8" secondAttribute="bottom" constant="51" id="Yi6-d5-7he"/>
-                            <constraint firstItem="tCD-5l-uIz" firstAttribute="centerX" secondItem="ARS-2Z-Hxl" secondAttribute="centerX" id="f64-tW-7K6"/>
-                            <constraint firstItem="tCD-5l-uIz" firstAttribute="leading" secondItem="8jB-3R-tIV" secondAttribute="leading" id="gj9-he-z7B"/>
-                            <constraint firstItem="tCD-5l-uIz" firstAttribute="top" secondItem="8jB-3R-tIV" secondAttribute="top" id="hVA-K6-MVS"/>
-                            <constraint firstAttribute="centerX" secondItem="q7K-IF-tx8" secondAttribute="centerX" id="lgU-zt-CfG"/>
-                            <constraint firstItem="DSo-83-snl" firstAttribute="top" secondItem="ARS-2Z-Hxl" secondAttribute="bottom" constant="35" id="nma-mJ-5kG"/>
-                            <constraint firstItem="tCD-5l-uIz" firstAttribute="bottom" secondItem="DSo-83-snl" secondAttribute="top" id="sea-dI-MtF"/>
+                            <constraint firstAttribute="centerX" secondItem="ARS-2Z-Hxl" secondAttribute="centerX" id="3Jz-ES-eRx"/>
+                            <constraint firstItem="DSo-83-snl" firstAttribute="top" secondItem="tCD-5l-uIz" secondAttribute="bottom" id="5Uv-4h-hsk"/>
+                            <constraint firstItem="tCD-5l-uIz" firstAttribute="leading" secondItem="8jB-3R-tIV" secondAttribute="leadingMargin" constant="-16" id="JXd-4t-kR7"/>
+                            <constraint firstItem="DSo-83-snl" firstAttribute="top" secondItem="ARS-2Z-Hxl" secondAttribute="bottom" constant="35" id="STY-LF-r7b"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tCD-5l-uIz" secondAttribute="trailing" constant="-16" id="b7t-vS-1Vu"/>
+                            <constraint firstItem="tCD-5l-uIz" firstAttribute="top" secondItem="8jB-3R-tIV" secondAttribute="topMargin" id="mAF-j9-ycX"/>
+                            <constraint firstAttribute="centerY" secondItem="q7K-IF-tx8" secondAttribute="centerY" id="mDi-qN-HJw"/>
+                            <constraint firstAttribute="centerX" secondItem="q7K-IF-tx8" secondAttribute="centerX" id="yGX-U0-K1g"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8TD-UM-79c"/>
@@ -282,13 +259,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="K4W-in-WXW">
-                                <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                                <rect key="frame" x="-107" y="-28" width="782" height="376"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="376" id="NDV-Ht-8xi"/>
+                                    <constraint firstAttribute="width" constant="782" id="e0D-wR-oYu"/>
+                                </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TIME'S UP!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wT6-XT-lfy">
                                 <rect key="frame" x="173" y="47" width="223" height="53"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="223" id="jtP-9p-Cv7"/>
-                                    <constraint firstAttribute="height" constant="53" id="xOb-o4-EME"/>
+                                    <constraint firstAttribute="width" constant="223" id="P2N-bu-uFd"/>
+                                    <constraint firstAttribute="height" constant="53" id="fcc-Sq-Ar7"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="LilitaOne" family="Lilita One" pointSize="46"/>
                                 <color key="textColor" red="0.99990516901016235" green="1" blue="0.99987047910690308" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -297,19 +278,18 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Award a point to the opposing team." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YXU-aS-FcX">
                                 <rect key="frame" x="-69" y="88" width="706" height="69"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="69" id="ArB-5j-4ZO"/>
-                                    <constraint firstAttribute="width" constant="706" id="Tu2-jb-V26"/>
+                                    <constraint firstAttribute="height" constant="69" id="9F4-iL-cVr"/>
+                                    <constraint firstAttribute="width" constant="706" id="yVM-xE-HhF"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="24"/>
                                 <color key="textColor" red="0.99990516901016235" green="1" blue="0.99987047910690308" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6sv-MW-Xg0">
-                                <rect key="frame" x="83" y="191" width="180" height="40"/>
+                                <rect key="frame" x="107" y="191" width="155" height="40"/>
                                 <color key="backgroundColor" red="0.23692223429679871" green="0.68653029203414917" blue="0.97770875692367554" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="sXs-wV-x9Q"/>
-                                    <constraint firstAttribute="width" constant="180" id="y9B-GZ-pzA"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="LilitaOne" family="Lilita One" pointSize="24"/>
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
@@ -322,11 +302,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ydx-jZ-P5o">
-                                <rect key="frame" x="306" y="191" width="180" height="40"/>
+                                <rect key="frame" x="306" y="191" width="155" height="40"/>
                                 <color key="backgroundColor" red="0.87847292423248291" green="0.26552549004554749" blue="0.30613604187965393" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="qNl-hX-MiW"/>
-                                    <constraint firstAttribute="width" constant="180" id="yYH-nO-oRh"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="LilitaOne" family="Lilita One" pointSize="24"/>
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
@@ -338,22 +317,29 @@
                                     <action selector="teamBButtonPressed:" destination="lB9-R1-cac" eventType="touchUpInside" id="LOI-An-IL2"/>
                                 </connections>
                             </button>
+                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="Dug-di-eKS">
+                                <rect key="frame" x="124" y="270" width="320" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="JG3-BZ-dtx"/>
+                                    <constraint firstAttribute="width" constant="320" id="Oui-JO-3X9"/>
+                                </constraints>
+                            </adBannerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="K4W-in-WXW" firstAttribute="top" secondItem="wT6-XT-lfy" secondAttribute="bottom" constant="-100" id="3VW-5P-GJI"/>
-                            <constraint firstItem="K4W-in-WXW" firstAttribute="leading" secondItem="6sv-MW-Xg0" secondAttribute="trailing" constant="-263" id="7XR-sk-x9T"/>
-                            <constraint firstItem="YXU-aS-FcX" firstAttribute="top" secondItem="wT6-XT-lfy" secondAttribute="bottom" constant="-12" id="CIf-DX-93v"/>
-                            <constraint firstAttribute="centerX" secondItem="wT6-XT-lfy" secondAttribute="centerX" id="FzS-bx-oHG"/>
-                            <constraint firstItem="6sv-MW-Xg0" firstAttribute="top" secondItem="K4W-in-WXW" secondAttribute="bottom" constant="-129" id="KDH-Rw-OjN"/>
-                            <constraint firstItem="K4W-in-WXW" firstAttribute="leading" secondItem="jgA-DG-yrl" secondAttribute="leading" id="N4w-fh-4US"/>
-                            <constraint firstAttribute="centerX" secondItem="YXU-aS-FcX" secondAttribute="centerX" id="OEl-JN-INH"/>
-                            <constraint firstItem="ydx-jZ-P5o" firstAttribute="leading" secondItem="K4W-in-WXW" secondAttribute="trailing" constant="-262" id="Zyb-c3-nvv"/>
-                            <constraint firstItem="ydx-jZ-P5o" firstAttribute="top" secondItem="K4W-in-WXW" secondAttribute="bottom" constant="-129" id="avG-eR-srT"/>
-                            <constraint firstItem="K4W-in-WXW" firstAttribute="bottom" secondItem="b68-WV-cjX" secondAttribute="top" id="gdL-fs-tGU"/>
-                            <constraint firstItem="K4W-in-WXW" firstAttribute="top" secondItem="jgA-DG-yrl" secondAttribute="top" id="o9x-b9-aLl"/>
-                            <constraint firstItem="K4W-in-WXW" firstAttribute="centerX" secondItem="YXU-aS-FcX" secondAttribute="centerX" id="tLJ-Qh-iSa"/>
-                            <constraint firstItem="K4W-in-WXW" firstAttribute="centerX" secondItem="wT6-XT-lfy" secondAttribute="centerX" id="tsl-S7-p2w"/>
+                            <constraint firstAttribute="centerX" secondItem="wT6-XT-lfy" secondAttribute="centerX" id="0F5-od-GyB"/>
+                            <constraint firstItem="6sv-MW-Xg0" firstAttribute="width" secondItem="ydx-jZ-P5o" secondAttribute="width" id="Hd0-qZ-Ogs"/>
+                            <constraint firstItem="b68-WV-cjX" firstAttribute="top" secondItem="Dug-di-eKS" secondAttribute="bottom" id="JT2-HP-ckD"/>
+                            <constraint firstItem="ydx-jZ-P5o" firstAttribute="top" secondItem="YXU-aS-FcX" secondAttribute="bottom" constant="34" id="M4K-6X-Ifw"/>
+                            <constraint firstAttribute="centerY" secondItem="K4W-in-WXW" secondAttribute="centerY" id="NAD-kW-Tu3"/>
+                            <constraint firstItem="K4W-in-WXW" firstAttribute="top" secondItem="wT6-XT-lfy" secondAttribute="bottom" constant="-128" id="Nqy-iI-zjk"/>
+                            <constraint firstItem="ydx-jZ-P5o" firstAttribute="leading" secondItem="6sv-MW-Xg0" secondAttribute="trailing" constant="44" id="Pic-K3-2e4"/>
+                            <constraint firstItem="6sv-MW-Xg0" firstAttribute="top" secondItem="YXU-aS-FcX" secondAttribute="bottom" constant="34" id="hNn-jM-VpC"/>
+                            <constraint firstAttribute="centerX" secondItem="Dug-di-eKS" secondAttribute="centerX" id="iwx-wt-QhS"/>
+                            <constraint firstAttribute="centerX" secondItem="K4W-in-WXW" secondAttribute="centerX" id="mBC-p8-T56"/>
+                            <constraint firstItem="K4W-in-WXW" firstAttribute="leading" secondItem="6sv-MW-Xg0" secondAttribute="trailing" constant="-369" id="qm9-B6-nqE"/>
+                            <constraint firstItem="YXU-aS-FcX" firstAttribute="top" secondItem="wT6-XT-lfy" secondAttribute="bottom" constant="-12" id="tJN-iH-zbH"/>
+                            <constraint firstAttribute="centerX" secondItem="YXU-aS-FcX" secondAttribute="centerX" id="wpA-7y-za3"/>
                         </constraints>
                     </view>
                     <connections>
@@ -366,7 +352,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sbB-W3-7X9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="27" y="886"/>
+            <point key="canvasLocation" x="31" y="988"/>
         </scene>
     </scenes>
     <resources>
@@ -380,6 +366,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Y3C-Vm-VDO"/>
+        <segue reference="Ux8-O3-GSq"/>
     </inferredMetricsTieBreakers>
 </document>
