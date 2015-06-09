@@ -9,13 +9,15 @@
 import UIKit
 import AVFoundation
 import AudioToolbox
+import iAd
 
 var pointsA = 0
 var pointsB = 0
 var winningScore = 6
 
-class PointRecord: UIViewController {
+class PointRecord: UIViewController, ADBannerViewDelegate {
 
+    @IBOutlet weak var adBanner: ADBannerView!
     @IBOutlet weak var teamAButton: UIButton!
     @IBOutlet weak var teamBButton: UIButton!
     
@@ -53,6 +55,12 @@ class PointRecord: UIViewController {
         teamBButton.layer.cornerRadius = 20
     }
     
+    override func viewDidLoad() {
+        adBanner.hidden = true
+        adBanner.delegate = self
+        self.canDisplayBannerAds = true
+    }
+    
     @IBAction func teamAButtonPressed(sender: AnyObject) {
         pointsA++
         println(pointsA)
@@ -86,6 +94,14 @@ class PointRecord: UIViewController {
             playPoint()
         }
 
+    }
+    
+    func bannerViewActionShouldBegin(banner: ADBannerView!, willLeaveApplication willLeave: Bool) -> Bool {
+        return true
+    }
+    
+    func bannerViewDidLoadAd(banner: ADBannerView!) {
+        adBanner.hidden = false
     }
     
     

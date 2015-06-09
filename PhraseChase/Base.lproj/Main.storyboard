@@ -59,31 +59,11 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team B" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vKQ-0j-qn5">
-                                <rect key="frame" x="488" y="129" width="61" height="23"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="23" id="Soz-rE-gpH"/>
-                                    <constraint firstAttribute="width" constant="61" id="zTv-fT-lrX"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="LilitaOne" family="Lilita One" pointSize="20"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dyQ-UU-klL">
                                 <rect key="frame" x="38" y="150" width="24" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="JK9-zW-aDT"/>
                                     <constraint firstAttribute="width" constant="24" id="XIz-0U-lPe"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="LilitaOne" family="Lilita One" pointSize="36"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m8i-Le-LDq">
-                                <rect key="frame" x="506" y="150" width="24" height="42"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="42" id="Bf7-F9-Ubs"/>
-                                    <constraint firstAttribute="width" constant="24" id="ka6-YL-HTo"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="LilitaOne" family="Lilita One" pointSize="36"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -139,6 +119,26 @@
                                     <constraint firstAttribute="height" constant="81" id="nwV-bq-YIl"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team B" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vKQ-0j-qn5">
+                                <rect key="frame" x="488" y="129" width="61" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="23" id="Soz-rE-gpH"/>
+                                    <constraint firstAttribute="width" constant="61" id="zTv-fT-lrX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="LilitaOne" family="Lilita One" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m8i-Le-LDq">
+                                <rect key="frame" x="506" y="150" width="24" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="Bf7-F9-Ubs"/>
+                                    <constraint firstAttribute="width" constant="24" id="ka6-YL-HTo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="LilitaOne" family="Lilita One" pointSize="36"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.17717251181602478" green="0.17751896381378174" blue="0.22971495985984802" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -317,25 +317,25 @@
                                     <action selector="teamBButtonPressed:" destination="lB9-R1-cac" eventType="touchUpInside" id="LOI-An-IL2"/>
                                 </connections>
                             </button>
-                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="Dug-di-eKS">
+                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="Upd-wb-eCf">
                                 <rect key="frame" x="124" y="270" width="320" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="JG3-BZ-dtx"/>
-                                    <constraint firstAttribute="width" constant="320" id="Oui-JO-3X9"/>
+                                    <constraint firstAttribute="height" constant="50" id="NWH-F3-hkE"/>
+                                    <constraint firstAttribute="width" constant="320" id="uhI-rA-nVZ"/>
                                 </constraints>
                             </adBannerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="wT6-XT-lfy" secondAttribute="centerX" id="0F5-od-GyB"/>
+                            <constraint firstItem="b68-WV-cjX" firstAttribute="top" secondItem="Upd-wb-eCf" secondAttribute="bottom" id="4mB-Bx-f8W"/>
+                            <constraint firstAttribute="centerX" secondItem="Upd-wb-eCf" secondAttribute="centerX" id="6JJ-jU-t4s"/>
                             <constraint firstItem="6sv-MW-Xg0" firstAttribute="width" secondItem="ydx-jZ-P5o" secondAttribute="width" id="Hd0-qZ-Ogs"/>
-                            <constraint firstItem="b68-WV-cjX" firstAttribute="top" secondItem="Dug-di-eKS" secondAttribute="bottom" id="JT2-HP-ckD"/>
                             <constraint firstItem="ydx-jZ-P5o" firstAttribute="top" secondItem="YXU-aS-FcX" secondAttribute="bottom" constant="34" id="M4K-6X-Ifw"/>
                             <constraint firstAttribute="centerY" secondItem="K4W-in-WXW" secondAttribute="centerY" id="NAD-kW-Tu3"/>
                             <constraint firstItem="K4W-in-WXW" firstAttribute="top" secondItem="wT6-XT-lfy" secondAttribute="bottom" constant="-128" id="Nqy-iI-zjk"/>
                             <constraint firstItem="ydx-jZ-P5o" firstAttribute="leading" secondItem="6sv-MW-Xg0" secondAttribute="trailing" constant="44" id="Pic-K3-2e4"/>
                             <constraint firstItem="6sv-MW-Xg0" firstAttribute="top" secondItem="YXU-aS-FcX" secondAttribute="bottom" constant="34" id="hNn-jM-VpC"/>
-                            <constraint firstAttribute="centerX" secondItem="Dug-di-eKS" secondAttribute="centerX" id="iwx-wt-QhS"/>
                             <constraint firstAttribute="centerX" secondItem="K4W-in-WXW" secondAttribute="centerX" id="mBC-p8-T56"/>
                             <constraint firstItem="K4W-in-WXW" firstAttribute="leading" secondItem="6sv-MW-Xg0" secondAttribute="trailing" constant="-369" id="qm9-B6-nqE"/>
                             <constraint firstItem="YXU-aS-FcX" firstAttribute="top" secondItem="wT6-XT-lfy" secondAttribute="bottom" constant="-12" id="tJN-iH-zbH"/>
@@ -343,6 +343,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="adBanner" destination="Upd-wb-eCf" id="xUd-1y-CkW"/>
                         <outlet property="teamAButton" destination="6sv-MW-Xg0" id="jA9-zp-g8k"/>
                         <outlet property="teamBButton" destination="ydx-jZ-P5o" id="2ku-xm-Epg"/>
                         <segue destination="WUF-55-eDL" kind="modal" identifier="showWinner" modalTransitionStyle="crossDissolve" id="Nmc-66-Ugj"/>

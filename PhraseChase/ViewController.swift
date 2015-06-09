@@ -9,7 +9,6 @@
 import UIKit
 import AVFoundation
 
-
 var timeIsRunning = false
 var gameIsRunning = false
 
