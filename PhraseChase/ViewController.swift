@@ -21,13 +21,16 @@ class ViewController: UIViewController {
     @IBOutlet weak var teamBScore: UILabel!
     @IBOutlet weak var skipButton: UIButton!
     @IBOutlet weak var restartButton: UIButton!
+    @IBOutlet weak var endTimer: UIButton!
+    @IBOutlet weak var howToPlay: UIButton!
+    
     
     var keyCount = gameWords.count
     var randomNumber = 0
     var timer = NSTimer()
     var randomKey = ""
     var randomVal: AnyObject!
-    var timeLimit = 10
+    var timeLimit = 60
     var player:AVAudioPlayer = AVAudioPlayer()
     var player2:AVAudioPlayer = AVAudioPlayer()
     var player3:AVAudioPlayer = AVAudioPlayer()
@@ -138,6 +141,9 @@ class ViewController: UIViewController {
         startButton.hidden = false
         skipButton.hidden = true
         restartButton.hidden = false
+        endTimer.hidden = true
+        howToPlay.hidden = false
+        
         if gameIsRunning == true {
             startButton.setTitle("CONTINUE", forState: UIControlState.Normal)
         } else {
@@ -179,6 +185,8 @@ class ViewController: UIViewController {
         skipButton.hidden = false
         gameIsRunning = true
         timeIsRunning = true
+        endTimer.hidden = false
+        howToPlay.hidden = true
         
         randomNumber = Int(arc4random_uniform(UInt32(keyCount)))
         
@@ -196,6 +204,11 @@ class ViewController: UIViewController {
         teamAScore.text = "\(pointsA)"
         teamBScore.text = "\(pointsB)"
     }
+    
+    @IBAction func endTimerPressed(sender: AnyObject) {
+        timeLimit = 0
+    }
+    
     
     
 }

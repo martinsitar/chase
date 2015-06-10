@@ -13,7 +13,7 @@ import iAd
 
 var pointsA = 0
 var pointsB = 0
-var winningScore = 3
+var winningScore = 7
 
 class PointRecord: UIViewController, ADBannerViewDelegate {
 
