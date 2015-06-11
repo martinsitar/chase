@@ -25,6 +25,7 @@
 		C87012D11B1EA0D8004AC0A7 /* Victory.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C87012D01B1EA0D8004AC0A7 /* Victory.mp3 */; };
 		C87012D31B1FC322004AC0A7 /* Winner.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87012D21B1FC322004AC0A7 /* Winner.swift */; };
 		C87012D51B1FEB5C004AC0A7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C87012D41B1FEB5C004AC0A7 /* AudioToolbox.framework */; };
+		C8B56F0F1B290C4E0060B216 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8B56F0E1B290C4E0060B216 /* iAd.framework */; };
 		C8F66D381B10D8FB00439C0D /* FormattingFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F66D371B10D8FB00439C0D /* FormattingFile.swift */; };
 		C8F66D3C1B1134BD00439C0D /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F66D3B1B1134BD00439C0D /* TableViewController.swift */; };
 		C8F66D3E1B11402E00439C0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F66D3D1B11402E00439C0D /* ViewController.swift */; };
@@ -63,6 +64,7 @@
 		C87012D21B1FC322004AC0A7 /* Winner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Winner.swift; sourceTree = "<group>"; };
 		C87012D41B1FEB5C004AC0A7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		C87012D61B21165A004AC0A7 /* LilitaOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "LilitaOne-Regular.ttf"; path = "../../../../Downloads/lilita_one/LilitaOne-Regular.ttf"; sourceTree = "<group>"; };
+		C8B56F0E1B290C4E0060B216 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		C8F66D371B10D8FB00439C0D /* FormattingFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormattingFile.swift; sourceTree = "<group>"; };
 		C8F66D3B1B1134BD00439C0D /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewController.swift; path = ../TableViewController.swift; sourceTree = "<group>"; };
 		C8F66D3D1B11402E00439C0D /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8B56F0F1B290C4E0060B216 /* iAd.framework in Frameworks */,
 				C87012D51B1FEB5C004AC0A7 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -99,6 +102,7 @@
 		C81F33561B0EA469003961BC = {
 			isa = PBXGroup;
 			children = (
+				C8B56F0E1B290C4E0060B216 /* iAd.framework */,
 				C87012D41B1FEB5C004AC0A7 /* AudioToolbox.framework */,
 				C81F33611B0EA469003961BC /* PhraseChase */,
 				C81F33771B0EA469003961BC /* PhraseChaseTests */,
@@ -121,16 +125,16 @@
 				C81F33681B0EA469003961BC /* Main.storyboard */,
 				C8F66D3D1B11402E00439C0D /* ViewController.swift */,
 				C82239201B1801E8006BAEB1 /* PointRecord.swift */,
+				C87012D21B1FC322004AC0A7 /* Winner.swift */,
+				C81F33641B0EA469003961BC /* AppDelegate.swift */,
+				C8F66D3B1B1134BD00439C0D /* TableViewController.swift */,
 				C84EA6111B21540E0081E8C7 /* point-awarded.mp3 */,
 				C84EA6151B215DD60081E8C7 /* momentum-2.mp3 */,
 				C84EA6161B215DD60081E8C7 /* momentum-3.mp3 */,
-				C84EA60F1B2153D40081E8C7 /* momentum.mp3 */,
-				C85106271B23AA000001BC9F /* skipword.mp3 */,
-				C87012D21B1FC322004AC0A7 /* Winner.swift */,
 				C87012D01B1EA0D8004AC0A7 /* Victory.mp3 */,
 				C84EA6131B21589A0081E8C7 /* buzzer.mp3 */,
-				C81F33641B0EA469003961BC /* AppDelegate.swift */,
-				C8F66D3B1B1134BD00439C0D /* TableViewController.swift */,
+				C85106271B23AA000001BC9F /* skipword.mp3 */,
+				C84EA60F1B2153D40081E8C7 /* momentum.mp3 */,
 				C81F336B1B0EA469003961BC /* Images.xcassets */,
 				C81F336D1B0EA469003961BC /* LaunchScreen.xib */,
 				C81F33841B0EA4A3003961BC /* Categories.swift */,

@@ -87,7 +87,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PMK-M5-jvT">
                                 <rect key="frame" x="134" y="243" width="300" height="55"/>
-                                <color key="backgroundColor" red="0.54014140367507935" green="0.73181658983230591" blue="0.17479786276817322" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.464091956615448" green="0.76804089546203613" blue="0.14093014597892761" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="FZ5-HJ-jOt"/>
                                     <constraint firstAttribute="width" constant="300" id="v9F-7y-Pg8"/>
@@ -325,7 +325,7 @@ Here are clues you cannot give:
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CsL-J0-rQm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-560" y="491"/>
+            <point key="canvasLocation" x="-569" y="177"/>
         </scene>
         <!--Winner-->
         <scene sceneID="zpr-QB-8jC">
@@ -465,7 +465,7 @@ Here are clues you cannot give:
                                     <action selector="teamBButtonPressed:" destination="lB9-R1-cac" eventType="touchUpInside" id="LOI-An-IL2"/>
                                 </connections>
                             </button>
-                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="Upd-wb-eCf">
+                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Upd-wb-eCf">
                                 <rect key="frame" x="124" y="270" width="320" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -473,6 +473,9 @@ Here are clues you cannot give:
                                     <constraint firstAttribute="height" constant="50" id="NWH-F3-hkE"/>
                                     <constraint firstAttribute="width" constant="320" id="uhI-rA-nVZ"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="lB9-R1-cac" id="5MQ-hj-9oc"/>
+                                </connections>
                             </adBannerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

@@ -13,7 +13,7 @@ import iAd
 
 var pointsA = 0
 var pointsB = 0
-var winningScore = 7
+var winningScore = 2
 
 class PointRecord: UIViewController, ADBannerViewDelegate {
 
@@ -56,9 +56,9 @@ class PointRecord: UIViewController, ADBannerViewDelegate {
     }
     
     override func viewDidLoad() {
-        adBanner.hidden = true
-        adBanner.delegate = self
         self.canDisplayBannerAds = true
+        adBanner.delegate = self
+        adBanner.hidden = true
     }
     
     @IBAction func teamAButtonPressed(sender: AnyObject) {
@@ -102,6 +102,7 @@ class PointRecord: UIViewController, ADBannerViewDelegate {
     
     func bannerView(banner: ADBannerView!, didFailToReceiveAdWithError error: NSError!) {
         NSLog("Error!")
+        adBanner.hidden = true
     }
     
     func bannerViewWillLoadAd(banner: ADBannerView!) {
@@ -110,6 +111,10 @@ class PointRecord: UIViewController, ADBannerViewDelegate {
     
     func bannerViewDidLoadAd(banner: ADBannerView!) {
         adBanner.hidden = false
+    }
+    
+    func bannerViewActionDidFinish(banner: ADBannerView!) {
+        
     }
     
     

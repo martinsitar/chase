@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -12,18 +13,40 @@
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch" translatesAutoresizingMaskIntoConstraints="NO" id="CWR-fF-twV">
                     <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="667" id="3eg-fd-uVu"/>
+                        <constraint firstAttribute="height" constant="375" id="gzE-8C-pGT"/>
+                        <constraint firstAttribute="width" secondItem="CWR-fF-twV" secondAttribute="height" multiplier="667:375" id="nkC-vH-P7V"/>
+                        <constraint firstAttribute="width" constant="667" id="pHs-GF-ASj"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="3eg-fd-uVu"/>
+                            <exclude reference="gzE-8C-pGT"/>
+                            <exclude reference="pHs-GF-ASj"/>
+                        </mask>
+                    </variation>
                 </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="CWR-fF-twV" secondAttribute="trailing" id="4Ns-6G-lFM"/>
                 <constraint firstItem="CWR-fF-twV" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="5fm-EP-AYE"/>
+                <constraint firstAttribute="centerY" secondItem="CWR-fF-twV" secondAttribute="centerY" id="RDY-HK-H4v"/>
                 <constraint firstAttribute="bottom" secondItem="CWR-fF-twV" secondAttribute="bottom" id="Tgj-KV-N9X"/>
                 <constraint firstItem="CWR-fF-twV" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="i3g-Rb-rfO"/>
+                <constraint firstAttribute="centerX" secondItem="CWR-fF-twV" secondAttribute="centerX" id="r0H-cS-rcn"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="4Ns-6G-lFM"/>
+                    <exclude reference="5fm-EP-AYE"/>
+                    <exclude reference="Tgj-KV-N9X"/>
+                </mask>
+            </variation>
             <point key="canvasLocation" x="547.5" y="454.5"/>
         </view>
     </objects>
